@@ -26,6 +26,7 @@ public class allusers {
             if (user.getEmail().equals(email)) {
                 return user;
             }
+            
         }
         return null;
     }

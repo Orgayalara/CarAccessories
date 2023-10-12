@@ -7,22 +7,41 @@ import java.util.logging.Logger;
 
 public class Users {
 
-	Logger logger = Logger.getLogger(Users.class.getName());
-	private String fullname;
+//Logger logger = Logger.getLogger(Users.class.getName());
+	private String fullName;
 	private String email;
 	private String password;
-	private String contactnumber;
-	private String shippingaddress;
-	boolean loggedIn = false;
+	private String contactNumber;
+	private String shippingAddress;
+	private int numberOfCar;
+	private String typeOfCar;
+	private String historyOrder;
+
+
+	//boolean loggedIn = false;
 
 	
-	public Users() {
-		this.fullname = null;
-		this.contactnumber = null;
-		this.password = null;
-		this.shippingaddress=null;
-		this.email=null;
+	
+	
+	public Users () {}
+	public Users(String fullName , String email,String password,String contactNumber,String shippingaddress,int numberOfCar,String typeOfCar, String historyOrder) {
+		this.fullName=fullName;
+		this.email = email;
+		this.password = password;
+		this.contactNumber = contactNumber;
+		this. shippingAddress =  shippingAddress;
+		this.numberOfCar = numberOfCar;
+		this.typeOfCar = typeOfCar;
+		this.historyOrder = historyOrder;
 	}
+	
+//	public Users() {
+//		this.fullname = null;
+//		this.contactnumber = null;
+//		this.password = null;
+//		this.shippingaddress=null;
+//		this.email=null;
+//	}
 
 	public  String getEmail() {
 		return email;
@@ -32,19 +51,19 @@ public class Users {
 		this.email = email;
 	}
 	public  String getshippingaddress() {
-		return shippingaddress;
+		return shippingAddress;
 	}
 
-	public void setshippingaddress(String shippingaddress) {
-		this.shippingaddress = shippingaddress;
+	public void setshippingaddress(String shippingAddress) {
+		this.shippingAddress = shippingAddress;
 	}
 
 	public String getnumber() {
-		return contactnumber;
+		return contactNumber;
 	}
 
 	public void setnumber(String contactnumber) {
-		this.contactnumber = contactnumber;
+		this.contactNumber = contactNumber;
 	}
 
 	public String getPassword() {
@@ -56,24 +75,42 @@ public class Users {
 	}
 
 
-	public void setfullname(String fullname) {
-		this.fullname = fullname;
+	public void setfullname(String fullName) {
+		this.fullName = fullName;
 	}
 
 	public String getfullname() {
-		return fullname;
+		return fullName;
 	}
-
-	public boolean isLoggedin() {
-		return loggedIn;
+	public  int getnumberOfCar() {
+		return numberOfCar;
 	}
+	public void setnumberOfCar(int numberOfCar) {
+		this.numberOfCar = numberOfCar;
+	}
+	
+	public  String gettypeOfCar() {
+		return typeOfCar;
+	}
+	public void settypeOfCar(String typeOfCar) 
+	{
+		this.typeOfCar = typeOfCar;
+	}
+	
+	
+	public  String gethistoryOrder() {
+		return historyOrder;
+	}
+	public void sethistoryOrder(String historyOrder) 
+	{
+		this.historyOrder = historyOrder;
+	}
+	
 	public String toString() {
 		return "customer: " + getfullname() + " - Email: " + getEmail();
 	}
 
-	public void logOut() {
-		loggedIn = false;
-	}
+	
 
 
 }
