@@ -1,4 +1,5 @@
 Feature: Log In 
+
 Scenario: 
 Admin Login with correct email and password
 		When admin enters email <"aya@example.com"> and password <"789"> 

@@ -46,6 +46,15 @@ public class Users {
 	public  String getEmail() {
 		return email;
 	}
+	public void UpdateEmail(String newEmail) {
+		this.email=newEmail;
+	}
+	public void UpdatecontactNumber(String newcontactNumber) {
+		this.contactNumber=newcontactNumber;
+	}
+	public void UpdateshippingAddress(String newshippingAddress) {
+		this.shippingAddress=newshippingAddress;
+	}
 
 	public void setEmail(String email) {
 		this.email = email;
