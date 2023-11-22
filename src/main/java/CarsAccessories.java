@@ -1,13 +1,17 @@
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Scanner;
 
 public class CarsAccessories {
+	static String currentuser;
 	static String Email;
 	private static String userType = "none" ;
+    private static ArrayList<Order> orders = new ArrayList<Order>();
 	public static ArrayList <Users> CustomerList = new ArrayList<Users>();
 	public static ArrayList <Admins> AdminList = new ArrayList<Admins>();
-	public static ArrayList <Installar> InstallarList = new ArrayList<Installar>();
-	public static ArrayList <Product> ProductList = new ArrayList<Product>();
+	public static ArrayList <Installar> InstallarList  = new ArrayList<Installar>();
+    public static ArrayList<InstallationRequest> InstRequest = new ArrayList<InstallationRequest>();
+    public static ArrayList <Product> ProductList = new ArrayList<Product>();
 	public static void setUserType(String type) {
 		userType = type;
 	}
@@ -15,11 +19,30 @@ public class CarsAccessories {
 	public static String getUserType() {
 		return userType;
 	}
+	 public static void OrderInformation() {
+		 Product sampleProduct = new Product("Mirror", "https://m.indiamart.com/impcat/side-mirrors.html", 100, "The Color is red", "BMW");
+	        Users sampleCustomer = new Users("Loai", "Loai@example.com", "48965", "123456", "Nablus", 1710, "Sample Car", "");
+
+	        // Creating a new Order instance
+	        Order newOrder = new Order(sampleProduct, sampleCustomer, new Date(),true);
+	        orders.add(newOrder);
+	 }
+	 public static void InstRequestInformation() {
+		  Product sampleProduct = new Product("MudFlap","https://m.indiamart.com/proddetail/renault-duster-hood-15550058133.html",890,"the color is Pink","Honday");
+	        Users sampleCustomer = new Users("Ashraf", "Ashraf@example.com", "7895", "123456", "Awarta", 230, "Sample Car", "");
+
+	        // Creating a new InstallationRequest instance
+	        InstallationRequest request1 = new InstallationRequest(sampleProduct, sampleCustomer, new Date(), "Pending");
+	        InstallationRequest request2 = new InstallationRequest(sampleProduct, sampleCustomer, new Date(), "Approved");
+
+	        InstRequest.add(request1);
+	        InstRequest.add(request2);
+	
+	 }
+	
     public static void ProductInformation() {
     	
-    	
-		
-		
+
     	Product p1 = new Product("Hood","https://m.indiamart.com/proddetail/renault-duster-hood-15550058133.html",5500,"the color is black","KIA sorento");
     	Product p2 = new Product("Serpentine_belt","https://m.indiamart.com/proddetail/renault-duster-hood-15550058133.html",100,"the color is black","KIA sorento");
     	Product p3 = new Product("Alloy_wheel","https://m.indiamart.com/proddetail/renault-duster-hood-15550058133.html",1600,"the color is black","KIA sorento");
@@ -112,12 +135,135 @@ public class CarsAccessories {
 			showMenu(login(Email , pass));}
 	    }
 	
-    public static void showMenuForCus() {
-		System.out.println("in cus menu");
+    public static boolean showMenuForCus() {
+        Scanner scanner = new Scanner(System.in);
+    	for (int i =0 ; i<CustomerList.size();i++) {
+   		 if(CustomerList.get(i).getEmail().equals(Email)) {
+   			currentuser = CustomerList.get(i).getfullname();
+   			break;
+   		 }
+    	}
 
+    	// Assuming this method gets the currently logged-in user
+
+    		
+            System.out.println("===== Customer Menu =====");
+            System.out.println("1. Browse Products");
+            System.out.println("2. Make a Purchase");
+            System.out.println("3. View Order History");
+            System.out.println("4. Request an Installtion");
+            System.out.println("5. Logout");
+            System.out.print("Enter your choice: ");
+
+            int choice = scanner.nextInt();
+            scanner.nextLine(); // Consume the newline
+
+			switch (choice) {
+                case 1:
+                    browseProducts();
+                    break;
+                case 2:
+                    makePurchase(currentuser);
+                    break;
+                case 3:
+                    viewOrderHistory(currentuser);
+                    break;
+                case 4:
+                	RequestanInstalltion(currentuser);
+                    break;
+              
+                case 5:
+                    System.out.println("Logging out from customer account.");
+                    break;
+                default:
+                    System.out.println("Invalid choice. Please enter a valid option.");
+            }
+			   return true;  }
+		
+
+   
+  
+    private static void RequestanInstalltion(String currentuser) {
+    	 System.out.println("===== Request an Installtion =====");
+         browseProducts();
+
+         Scanner scanner = new Scanner(System.in);
+
+         System.out.print("Enter the name of the product you want to Install: ");
+         String productName = scanner.nextLine();
+         String reqdetails;
+         String instemail = InstallarList.get(0).getEmail();
+         Product selectedProduct = null;
+         
+         for (Product product : ProductList) {
+             if (product.getName().equalsIgnoreCase(productName)) {
+                 selectedProduct = product;
+                 InstallationRequest instreq = new InstallationRequest(selectedProduct, CustomerList.get(0), new Date(), "New inst req");             
+                 InstRequest.add(instreq);
+                 reqdetails=instreq.getStatus()+""
+                 		+ ""+instreq.getCustomer()+""
+                 		+ ""+instreq.getProduct()+""
+                 		+ ""+instreq.getPreferredDate();
+                System.out.println("installtion req is successful. Thank you for shopping!");
+                SendMail.getSendEmail(reqdetails, instemail);
+                 break;
+             }
+         }
+
+         if (selectedProduct == null) {
+             System.out.println("Purchase unsuccessful. Product is unavailable!");
+         }
+     }
+   
+	
+	private static int browseProducts() {
+        // Implement functionality for customers to browse products
+        System.out.println("===== Browse Products =====");
+        for (Product Products : ProductList) {
+            System.out.println(Products.getName() + " - " + Products.getDetails() + " - $" + Products.getPrice());
+        }
+
+    return 1; }
+
+    private static void makePurchase(String customer) {
+        System.out.println("===== Make a Purchase =====");
+        browseProducts();
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the name of the product you want to purchase: ");
+        String productName = scanner.nextLine();
+        boolean state=false;
+        Product selectedProduct = null;
+        for (Product product : ProductList) {
+            if (product.getName().equalsIgnoreCase(productName)) {
+                selectedProduct = product;
+                state =true;
+                Order order = new Order(selectedProduct, CustomerList.get(0), new Date() , true);   
+                orders.add(order);
+                CustomerList.get(0).orderStatus(state, Email);
+                System.out.println("Purchase successful. Thank you for shopping!");
+                break;
+            }
+        }
+
+        if (selectedProduct == null) {
+            System.out.println("Purchase unsuccessful. Product is unavailable!");
+        }
     }
   
-    public static boolean removeProduct(String s) {
+
+    private static void viewOrderHistory(String customer) {
+        System.out.println("===== Order History =====");
+        for (Order order : orders) {
+            if (order.getCustomer().getfullname().equals(customer)) {
+                System.out.println("Product: " + order.getProduct().getName() + " - Price: $" + order.getProduct().getPrice());
+            }
+        }
+    }
+
+   
+	public static boolean removeProduct(String s) {
     	 boolean	flag=false;
     	 for (int i =0 ; i<ProductList.size();i++) {
     		 if(ProductList.get(i).getName().equals(s)) {
@@ -230,9 +376,9 @@ public class CarsAccessories {
     	
 		return flag;
     }
-    public static void showMenuForAd( ) {
-    	System.out.println("in admin menu");
-    	System.out.println("Enter : \n1) Show all Product.\n2) Remove Product.\n3) Add product.\n4) Update to any product.\n5) Viwe all Customers Acounts.\n6) Manage the Customers Acounts.  \n8) log out");
+    public static boolean showMenuForAd( ) {
+        System.out.println("===== Admin Menu =====");
+        System.out.println("Enter : \n1) Show all Product.\n2) Remove Product.\n3) Add product.\n4) Update to any product.\n5) Viwe all Customers Acounts.\n6) Manage the Customers Acounts.  \n7) log out");
     	int num = input2.nextInt();
 switch(num) {
 		
@@ -240,7 +386,7 @@ switch(num) {
 		showMenuForAd();
 			
 				
-		           break; 
+		  break; 
 		           
 		case  2 :System.out.println("Enter Name item to removing");
 		for (Product Products : ProductList) {
@@ -290,14 +436,44 @@ switch(num) {
 				
 		}
         break;
+		case 7 : break;
 		  default:showMenuForAd();
 		   break;
 		}
-    }
+    return true;}
    
 
-    public static void showMenuForIns( ) {
-    	System.out.println("in ins menu");
+
+    public static boolean showMenuForIns() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("===== Installer Menu =====");
+        System.out.println("Enter:\n1) View Installation Requests\n2) Logout");
+        int num = scanner.nextInt();
+
+        switch (num) {
+            case 1:
+                viewInstallationRequestsForInstaller();
+                break;
+            case 2:
+                System.out.println("Logging out from installer account.");
+                break;
+            default:
+                System.out.println("Invalid choice. Please enter a valid option.");
+        }
+
+        return true;
+    }
+
+    private static void viewInstallationRequestsForInstaller() {
+        // Implement functionality for installers to view their installation requests
+        System.out.println("===== View Installation Requests =====");
+        for (InstallationRequest request : InstRequest) {
+            System.out.println("Product: " + request.getProduct().getName() +
+                    " - Customer: " + request.getCustomer().getfullname() +
+                    " - Preferred Date: " + request.getPreferredDate() +
+                    " - Status: " + request.getStatus());
+        }
     }
 
     public static Users FullInformationToSignUp() {
@@ -336,8 +512,11 @@ switch(num) {
     }
     public static boolean showMenu(String type ) {
     	boolean flag=false;
-    	if (type.equals("Customer")) {flag= true; showMenuForCus();}
-    	else     	if (type.equals("admin")) {flag= true;showMenuForAd();}
+    	if (type.equals("Customer"))
+    	{flag= true; showMenuForCus();}
+    	else     	if (type.equals("admin"))
+    	{flag= true;showMenuForAd();}
+    	
     	else if (type.equals("installer")) {flag= true;showMenuForIns();}
     	else 	{flag= true; showMenuForNone();}
 
@@ -350,7 +529,7 @@ return flag;
     public static String login(String Email , String passWord) {
     	
     	
-    	Users UserNumber1 = new Users("Aya","aya@example.com","123","059874","Nablus",12589,"BMW","");
+    	Users UserNumber1 = new Users("Aya","ayahazeem3@gmail.com","123","059874","Nablus",12589,"BMW","");
     	Users UserNumber2 = new Users("LARA","lara@example.com","456","056987","jenin",4587,"marceds","");
     	Users UserNumber3 = new Users("batool","batool@example.com","789","05684","Ramalla",4658,"seat","");
     	CustomerList.add(UserNumber1);
@@ -363,7 +542,7 @@ return flag;
     	AdminList.add(AdminNumber11);
 
 //    	2installar
-    	Installar InstallarNumber1 = new Installar("Marwa","Marwa@example.com","3344");
+    	Installar InstallarNumber1 = new Installar("Marwa","s12043062@stu.najah.edu","3344");
     	InstallarList.add(InstallarNumber1);
 
 

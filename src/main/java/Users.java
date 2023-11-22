@@ -18,18 +18,18 @@ public class Users {
 	private String historyOrder;
 
 
-	//boolean loggedIn = false;
+	boolean loggedIn = false;
 
 	
 	
 	
 	public Users () {}
-	public Users(String fullName , String email,String password,String contactNumber,String shippingaddress,int numberOfCar,String typeOfCar, String historyOrder) {
+	public Users(String fullName , String email,String password,String contactNumber,String shippingAddress,int numberOfCar,String typeOfCar, String historyOrder) {
 		this.fullName=fullName;
 		this.email = email;
 		this.password = password;
 		this.contactNumber = contactNumber;
-		this. shippingAddress =  shippingAddress;
+		this.shippingAddress = shippingAddress;
 		this.numberOfCar = numberOfCar;
 		this.typeOfCar = typeOfCar;
 		this.historyOrder = historyOrder;
@@ -118,7 +118,24 @@ public class Users {
 	public String toString() {
 		return "customer: " + getfullname() + " - Email: " + getEmail();
 	}
+	 public boolean orderStatus(boolean orderstatusnow,String email) {
+	        String status = "";
 
+	        if(orderstatusnow) {
+	                    status = "Your Order is Confirmed";
+	                    
+	                    SendMail.getSendEmail(status, email);
+	                    return true;
+
+	            }
+	        else
+	        {
+	        	 status = "an error occured in your order, Sorry";
+                 SendMail.getSendEmail(status, email);	
+	        	
+	        return false;}
+	        
+	    }
 	
 
 

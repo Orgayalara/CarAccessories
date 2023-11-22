@@ -4,9 +4,10 @@ public class Installar {
 	private String fullName;
 	private String email;
 	private String password;
+	public boolean loggedin=false;
 
 	public Installar () {}
-	public Installar(String fullName , String email,String password) {
+	public Installar(String fullName , String email ,String password) {
 		this.email = email;
 		this.fullName=fullName;
 		this.password = password;
@@ -32,5 +33,10 @@ public class Installar {
 	public String getfullname() {
 		return fullName;
 	}
+	 public boolean reqstatus(String status,String email) {
+	                    SendMail.getSendEmail(status, email);
+	   return true;
+	 }
 }
+
 

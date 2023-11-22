@@ -1,10 +1,12 @@
+import java.util.ArrayList;
 
 public class Admins {
 
 	private String fullName;
 	private String email;
 	private String password;
-
+	public boolean loggedin = false;
+	public static ArrayList <Product> ProductList = new ArrayList<Product>();
 	public Admins () {}
 	public Admins( String fullName ,String email,String password) {
 		this.email = email;
@@ -32,4 +34,6 @@ public class Admins {
 	public String getfullname() {
 		return fullName;
 	}
+
+	   	 
 }
