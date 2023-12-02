@@ -11,7 +11,7 @@ import io.cucumber.java.en.When;
 public class Notification {
 	String reqdetails;
 	boolean orderstate = true;
-	Product hood = new Product("Hood","https://m.indiamart.com/proddetail/renault-duster-hood-15550058133.html",5500,"the color is black","KIA sorento");
+	Product hood = new Product("Hood","https://m.indiamart.com/proddetail/renault-duster-hood-15550058133.html",5500,"the color is black","KIA sorento", 0, false, true, false);
 	Users aya =new Users("Aya","ayahazeem3@gmail.com","123","059874","Nablus",12589,"BMW","");
 	Installar x=new Installar("Marwa","s12043062@stu.najah.edu","3344");
 	

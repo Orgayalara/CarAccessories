@@ -18,7 +18,10 @@ public class EditProduct {
 		assertTrue(CarsAccessories.editProduct("Hod",3,"5700"));
 		assertTrue(CarsAccessories.editProduct("Hod",4,"the_color_is_red"));
 		assertTrue(CarsAccessories.editProduct("Hod",5,"Jeep"));
-		
+		assertTrue(CarsAccessories.editProduct("Hod",6,"2"));
+		assertTrue(CarsAccessories.editProductboolean("Hod",7,false));
+		assertTrue(CarsAccessories.editProductboolean("Hod",8,false));
+		assertTrue(CarsAccessories.editProductboolean("Hod",9,false));
 	}
 
 }

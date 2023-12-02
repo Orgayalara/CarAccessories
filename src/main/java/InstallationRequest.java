@@ -5,7 +5,7 @@ public class InstallationRequest {
     private Users customer;
     private Date preferredDate;
     private String status;
-
+    private String detailsForm;
     public InstallationRequest() {
     }
 
@@ -47,5 +47,13 @@ public class InstallationRequest {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public String getdetailsForm() {
+        return detailsForm;
+    }
+
+    public void setdetailsForm(String detailsForm) {
+        this.detailsForm = detailsForm;
     }
 }

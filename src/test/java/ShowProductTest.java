@@ -22,7 +22,8 @@ public class ShowProductTest {
 	public void view_the_product() {
 //		ArrayList <Product> ProductList = new ArrayList<Product>();
 		CarsAccessories.ProductInformation();
-	    assertTrue(CarsAccessories.ShowAllProduct());
+		int n=1;
+	    assertTrue(CarsAccessories.catalog(1));
 	
 	}
 

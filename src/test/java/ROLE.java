@@ -1,5 +1,4 @@
 import io.cucumber.java.en.Given;
-
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertTrue;
 import io.cucumber.java.en.Then;
@@ -10,13 +9,13 @@ public class ROLE {
 	Users cus=new Users("Ayara","ayamed@example.com","582","852","Nablus",852,"seaat","");
 	Installar inst=new Installar("mohamad","mohamad@test","1234");
 @Given("an admin user is logged in")
-public void anAdminUserIsLoggedIn() {
+public void anAdminUserIsLoggedIn(){
   admin.loggedin=true;
 }
 
 @Then("they should see the admin menu")
 public void theyShouldSeeTheAdminMenu() {
- assertTrue(CarsAccessories.showMenuForAd());
+ assertTrue(rolemaintest.showMenuForAd());
 }
 
 @Given("a customer is logged in")
@@ -26,7 +25,7 @@ public void aCustomerIsLoggedIn() {
 
 @Then("they should see the Customer menu")
 public void theyShouldSeeTheCustomerMenu() {
-CarsAccessories.showMenuForCus();
+assertTrue(rolemaintest.showMenuForCus());
 }
 
 @Given("an installer is logged in")
@@ -36,7 +35,7 @@ public void anInstallerIsLoggedIn() {
 
 @Then("they should see the Installer menu")
 public void theyShouldSeeTheInstallerMenu() {
-	assertTrue(CarsAccessories.showMenuForIns()); 
+	assertTrue(rolemaintest.showMenuForIns()); 
 }
 
 }

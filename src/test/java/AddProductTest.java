@@ -19,7 +19,7 @@ public class AddProductTest {
 	@Then("Add the Product .")
 	public void add_the_product() {
 
-		Product p = new Product("Mud Flap5","https://m.indiamart.com/proddetail/renault-duster-hood-15550058133.html",5500,"the color is red","KIA sorento");
+		Product p = new Product("Mud Flap5","https://m.indiamart.com/proddetail/renault-duster-hood-15550058133.html",5500,"the color is red","KIA sorento", 0, true , false, false);
 		assertTrue(CarsAccessories.addProduct(p));
 	}
 }
