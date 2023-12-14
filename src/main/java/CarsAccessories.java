@@ -27,7 +27,6 @@ public class CarsAccessories {
 		 Product sampleProduct = new Product("Mirror", "https://m.indiamart.com/impcat/side-mirrors.html", 100, "The Color is red", "BMW", 5 , false , true , false);
 	        Users sampleCustomer = new Users("Loai", "Loai@example.com", "48965", "123456", "Nablus", 1710, "Sample Car", "");
 
-	        // Creating a new Order instance
 	        Order newOrder = new Order(sampleProduct, sampleCustomer, new Date(),true);
 	        orders.add(newOrder);
 	 }
@@ -35,7 +34,6 @@ public class CarsAccessories {
 		  Product sampleProduct = new Product("MudFlap","https://m.indiamart.com/proddetail/renault-duster-hood-15550058133.html",890,"the color is Pink","Honday", 4 , false , true , false);
 	        Users sampleCustomer = new Users("Ashraf", "Ashraf@example.com", "7895", "123456", "Awarta", 230, "Sample Car", "");
 
-	        // Creating a new InstallationRequest instance
 	        InstallationRequest request1 = new InstallationRequest(sampleProduct, sampleCustomer, new Date(), "Pending");
 	        InstallationRequest request2 = new InstallationRequest(sampleProduct, sampleCustomer, new Date(), "Approved");
 
@@ -69,12 +67,7 @@ public class CarsAccessories {
     		    		System.out.println(ProductList.get(i).getDetails());
     		    		System.out.print("type of car can apply  :");
     		    		System.out.println(ProductList.get(i).getType());
-    		    	//	System.out.print("The product isInternal?  :");
-    		    	//	System.out.println(ProductList.get(i).getInternal());
-    		    	//	System.out.print("The product isExternal?  :");
-    		    	//	System.out.println(ProductList.get(i).getExternal());
-    		    	//	System.out.print("The product isElectronics?  :");
-    		    	//	System.out.println(ProductList.get(i).getElectronics());
+    		   
     		    		
     		    		System.out.println("____________________________________________________________________________________________________________");
 
@@ -99,12 +92,7 @@ public class CarsAccessories {
 				    		System.out.println(ProductList.get(i).getDetails());
 				    		System.out.print("type of car can apply  :");
 				    		System.out.println(ProductList.get(i).getType());
-				    	//	System.out.print("The product isInternal?  :");
-				    	//	System.out.println(ProductList.get(i).getInternal());
-				    	//	System.out.print("The product isExternal?  :");
-				    	//	System.out.println(ProductList.get(i).getExternal());
-				    	//	System.out.print("The product isElectronics?  :");
-				    	//	System.out.println(ProductList.get(i).getElectronics());
+				    
 				    		System.out.println("____________________________________________________________________________________________________________");
 
 							 
@@ -262,7 +250,6 @@ public class CarsAccessories {
    		 }
     	}
 
-    	// Assuming this method gets the currently logged-in user
     	
     		
             System.out.println("===== Customer Menu =====");
@@ -271,8 +258,9 @@ public class CarsAccessories {
             System.out.println("3. View Order History");
             System.out.println("4. Request an Installtion");
             System.out.println("5. Reviews and Ratings.");
-            System.out.println("6. Search");
-            System.out.println("7. Logout");
+            System.out.println("6. Edit Profile");
+            System.out.println("7. Search");
+            System.out.println("8. Logout");
             System.out.print("Enter your choice: ");
 
             int choice = scanner.nextInt();
@@ -299,13 +287,17 @@ public class CarsAccessories {
                 	funReviewsandRatings(infReviewsandRatings());
                     showMenuForCus();
                     break;
-                case 6: 
+                case 6:
+                    editProfile(currentuser);
+                    showMenuForCus();
+                    break;
+                case 7: 
                 	System.out.println("Enter the beginning of the name of the product you want to search for: ");
             		String partfromName = input2.next();
                 	search(partfromName);
                     showMenuForCus();
                 	break;
-                case 7:
+                case 8:
                     System.out.println("Logging out from customer account.");
                     loginmain();
                     break;
@@ -318,7 +310,39 @@ public class CarsAccessories {
 
    
   
-    public static void RequestanInstalltion(String currentuser) {
+    public static void editProfile(String username) {
+        for (Users customer : CustomerList) {
+            if (customer.getfullname().equals(username)) {
+                Scanner scanner = new Scanner(System.in);
+                System.out.println("Editing profile for user: " + username);
+//
+                // Prompt the user to enter new details
+                System.out.print("Enter new full name: ");
+                String newFullName = scanner.nextLine();
+                System.out.print("Enter new email: ");
+                String newEmail = scanner.nextLine();
+                System.out.print("Enter new Password: ");
+                String newPass = scanner.nextLine();
+                System.out.print("Enter new contact number: ");
+                String newContactNumber = scanner.nextLine();
+
+                // Set the new details
+                customer.setfullname(newFullName);
+                customer.setEmail(newEmail);
+                customer.setnumber(newContactNumber);
+                customer.setPassword(newPass);
+
+                System.out.println("Profile updated successfully!");
+                return;
+            }
+        }
+
+        System.out.println("User not found. Unable to edit profile.");
+    }
+
+
+     
+	public static void RequestanInstalltion(String currentuser) {
     	 System.out.println("===== Request an Installtion =====");
          browseProducts();
 
@@ -352,16 +376,13 @@ public class CarsAccessories {
      }
    
 	
-	private static int browseProducts() {
-        // Implement functionality for customers to browse products
-      //  System.out.println("===== Browse Products =====");
-      //  for (Product Products : ProductList) {
-      //      System.out.println(Products.getName() + " - " + Products.getDetails() + " - $" + Products.getPrice());
-       // }
+	public static int browseProducts() {
+        System.out.println("===== Browse Products =====");
+     
 		catalog(infoProductcatalog());
     return 1; }
 
-    private static void makePurchase(String customer) {
+    public static void makePurchase(String customer) {
         System.out.println("===== Make a Purchase =====");
         browseProducts();
 
@@ -389,7 +410,7 @@ public class CarsAccessories {
     }
   
 
-    private static void viewOrderHistory(String customer) {
+    public static void viewOrderHistory(String customer) {
         System.out.println("===== Order History =====");
         for (Order order : orders) {
             if (order.getCustomer().getfullname().equals(customer)) {
@@ -795,6 +816,8 @@ switch(num) {
                     " - Preferred Date: " + request.getPreferredDate() +
                     " - Status: " + request.getStatus());
         }
+
+        
     }
 
     public static Users FullInformationToSignUp() {
@@ -885,7 +908,7 @@ return flag;
     public static String login(String Email , String passWord) {
     	
     	
-    	Users UserNumber1 = new Users("Aya","ayahazeem3@gmail.com","123","059874","Nablus",12589,"BMW","");
+    	Users UserNumber1 = new Users("AYAAWWAD","ayahazeem3@gmail.com","123","056","Nablus",12589,"BMW","");
     	Users UserNumber2 = new Users("LARA","lara@example.com","456","056987","jenin",4587,"marceds","");
     	Users UserNumber3 = new Users("batool","batool@example.com","789","05684","Ramalla",4658,"seat","");
     	Users UserNumber4 = new Users("2","2","2","2","2",2,"2","");
@@ -893,13 +916,13 @@ return flag;
     	CustomerList.add(UserNumber2);
     	CustomerList.add(UserNumber3);
     	CustomerList.add(UserNumber4);
-//    	2 admin 
+
     	Admins AdminNumber1 = new Admins("Bayan","Bayan@example.com","1122");
     	AdminList.add(AdminNumber1);
     	Admins AdminNumber11 = new Admins("1","1","1");
     	AdminList.add(AdminNumber11);
 
-//    	2installar
+
     	Installar InstallarNumber1 = new Installar("Marwa","s12043062@stu.najah.edu","3344");
     	InstallarList.add(InstallarNumber1);
     	Installar InstallarNumber2 = new Installar("3","3","3");
@@ -918,7 +941,6 @@ for (Users user : CustomerList) {
 					
 			}
 
-//for admin
 for (Admins Admin : AdminList) {
 	
 	if ((Admin.getEmail() .equals(Email))&&(Admin.getPassword().equals(passWord))) {
@@ -928,7 +950,6 @@ for (Admins Admin : AdminList) {
 	
 			
 	}
-//for installar
 for (Installar installar : InstallarList) {
 	
 	if ((installar.getEmail() .equals(Email))&&(installar.getPassword().equals(passWord))) {
