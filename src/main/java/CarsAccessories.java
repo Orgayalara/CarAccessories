@@ -805,6 +805,7 @@ switch(num) {
             System.out.println("Invalid installation request number.");
         }
         return true;
+        
     }		
 	
 	private static void viewInstallationRequestsForInstaller() {

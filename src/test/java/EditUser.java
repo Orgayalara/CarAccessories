@@ -14,13 +14,17 @@ public class EditUser {
     public void the_user_is_logged_in(String username) {
         this.username = username;
         cus.loggedIn=true;  
+        
         CarsAccessories.CustomerList.add(cus);
+       // CarsAccessories.CustomerList.add(cus);
+
 
     }
 
     @When("the user updates their profile with new information")
     public void the_user_updates_their_profile_with_new_information() {
         rolemaintest.editProfile(username);
+        
     }
 
     @Then("the user's profile should be updated successfully")

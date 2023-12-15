@@ -11,6 +11,8 @@ public class ROLE {
 @Given("an admin user is logged in")
 public void anAdminUserIsLoggedIn(){
   admin.loggedin=true;
+ // admin.loggedin=true;
+
 }
 
 @Then("they should see the admin menu")
@@ -26,6 +28,7 @@ public void aCustomerIsLoggedIn() {
 @Then("they should see the Customer menu")
 public void theyShouldSeeTheCustomerMenu() {
 assertTrue(rolemaintest.showMenuForCus());
+
 }
 
 @Given("an installer is logged in")

@@ -776,7 +776,6 @@ public class rolemaintest {
 
 	        System.out.println("===== Schedule Appointment =====");
 
-	        // Display available installation requests
 	        System.out.println("Available Installation Requests:");
 	        for (int i = 0; i < InstRequest.size(); i++) {
 	            InstallationRequest request = InstRequest.get(i);
@@ -786,7 +785,6 @@ public class rolemaintest {
 	                    " - Status: " + request.getStatus());
 	        }
 
-	        // Ask the installer to choose an installation request
 	        System.out.print("Enter the number of the installation request you want to schedule: ");
 	        return true;
 	        }
@@ -794,7 +792,6 @@ public class rolemaintest {
 	   		
 		
 		private static void viewInstallationRequestsForInstaller() {
-	        // Implement functionality for installers to view their installation requests
 	        System.out.println("===== View Installation Requests =====");
 	        for (InstallationRequest request : InstRequest) {
 	            System.out.println("Product: " + request.getProduct().getName() +
@@ -820,10 +817,11 @@ public class rolemaintest {
 			int numberOfCar = input2.nextInt();
 			System.out.println("Enter Your typeOfCar:");
 			String typeOfCar = input2.next();
-//			System.out.println("Enter Your historyOrder:");
-//			String historyOrder = input2.next();
+
 			Users newUser = new Users(fullName,Email,password,contactNumber,shippingAddress,numberOfCar,typeOfCar,"");
 	    	return newUser;
+	    //	return newUser;
+
 	    	
 	    }
 	    public static boolean signup(Users U) {
