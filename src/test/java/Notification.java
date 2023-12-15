@@ -6,6 +6,8 @@ import static org.junit.Assert.assertTrue;
 
 import java.util.Date;
 
+import javax.mail.MessagingException;
+
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 public class Notification {
@@ -28,7 +30,7 @@ public class Notification {
 	}
 
 	@Then("the customer receives an order confirmation notification")
-	public void theCustomerReceivesAnOrderConfirmationNotification() {
+	public void theCustomerReceivesAnOrderConfirmationNotification() throws MessagingException {
 	assertTrue(aya.orderStatus(orderstate, "ayahazeem3@gmail.com")); 
 	}
 
@@ -38,7 +40,7 @@ public class Notification {
 	}
 
 	@Then("the customer receives a notification about the updated order status")
-	public void theCustomerReceivesANotificationAboutTheUpdatedOrderStatus() 
+	public void theCustomerReceivesANotificationAboutTheUpdatedOrderStatus() throws MessagingException 
 	{
 		assertFalse(aya.orderStatus(orderstate, "ayahazeem3@gmail.com"));
 	}
@@ -57,7 +59,7 @@ public class Notification {
 	}
 
 	@Then("installers receive a notification about the new request")
-	public void installersReceiveANotificationAboutTheNewRequest() {
+	public void installersReceiveANotificationAboutTheNewRequest() throws MessagingException {
 	    assertTrue(x.reqstatus(reqdetails, x.getEmail()));
 	}
 }

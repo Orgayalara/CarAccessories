@@ -3,6 +3,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.Scanner;
 
+import javax.mail.MessagingException;
+
 public class CarsAccessories {
 	static String currentuser;
 	static String Email;
@@ -219,7 +221,7 @@ public class CarsAccessories {
     	return flag;
     }
 
-    public static void showMenuForNone() {
+    public static void showMenuForNone() throws MessagingException {
 			System.out.println("you are not user in this system ! \n please sign up ner user or again log in  ");
 			System.out.println("1.Enter To Sign Up");
 			System.out.println("2.Enter To log in");
@@ -240,7 +242,7 @@ public class CarsAccessories {
 			showMenu(login(Email , pass));}
 	    }
 	
-    public static boolean showMenuForCus() {
+    public static boolean showMenuForCus() throws MessagingException {
         Scanner scanner = new Scanner(System.in);
     	for (int i =0 ; i<CustomerList.size();i++) {
    		 if(CustomerList.get(i).getEmail().equals(Email)) {
@@ -342,7 +344,7 @@ public class CarsAccessories {
 
 
      
-	public static void RequestanInstalltion(String currentuser) {
+	public static void RequestanInstalltion(String currentuser) throws MessagingException {
     	 System.out.println("===== Request an Installtion =====");
          browseProducts();
 
@@ -382,7 +384,7 @@ public class CarsAccessories {
 		catalog(infoProductcatalog());
     return 1; }
 
-    public static void makePurchase(String customer) {
+    public static void makePurchase(String customer) throws MessagingException {
         System.out.println("===== Make a Purchase =====");
         browseProducts();
 
@@ -572,7 +574,7 @@ public class CarsAccessories {
     	
 		return flag;
     }
-    public static boolean showMenuForAd( ) {
+    public static boolean showMenuForAd( ) throws MessagingException {
         System.out.println("===== Admin Menu =====");
         System.out.println("Enter : \n1)Ptoduct Catalog.\n2) Remove Product.\n3) Add product.\n4) Update to any product.\n5) Viwe all Customers Acounts.\n6) Manage the Customers Acounts. \n7) Schedule and manage installation appointments."
         		+ "\n8) Show The Reviews And Ratings. \n9) log out");
@@ -705,7 +707,7 @@ switch(num) {
     	
     	return true;
     }
-    public static boolean showMenuForIns() {
+    public static boolean showMenuForIns() throws MessagingException {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("===== Installer Menu =====");
@@ -732,7 +734,7 @@ switch(num) {
 
         return true;
     }
-    public static void loginmain() {
+    public static void loginmain() throws MessagingException {
     	ProductInformation();
 		Scanner input2 = new Scanner(System.in);
 		System.out.println("\n========================");
@@ -855,7 +857,7 @@ switch(num) {
     	return true;
 		
     }
-    public static boolean showMenu(String type ) {
+    public static boolean showMenu(String type ) throws MessagingException {
     	boolean flag=false;
     	if (type.equals("Customer"))
     	{flag= true; showMenuForCus();}
@@ -973,7 +975,7 @@ for (Installar installar : InstallarList) {
     
     
     
-	public static void main(String[] args) {
+	public static void main(String[] args) throws MessagingException {
 		// TODO Auto-generated method stub
 		ProductInformation();
 		Scanner input2 = new Scanner(System.in);

@@ -1,6 +1,9 @@
 import io.cucumber.java.en.Given;
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertTrue;
+
+import javax.mail.MessagingException;
+
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
@@ -26,7 +29,7 @@ public void aCustomerIsLoggedIn() {
 }
 
 @Then("they should see the Customer menu")
-public void theyShouldSeeTheCustomerMenu() {
+public void theyShouldSeeTheCustomerMenu() throws MessagingException {
 assertTrue(rolemaintest.showMenuForCus());
 
 }

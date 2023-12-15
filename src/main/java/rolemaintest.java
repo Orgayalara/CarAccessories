@@ -3,6 +3,8 @@
 	import java.util.Date;
 	import java.util.Scanner;
 
+import javax.mail.MessagingException;
+
 	
 public class rolemaintest {
 
@@ -233,7 +235,7 @@ public class rolemaintest {
 	    	return flag;
 	    }
 
-	    public static void showMenuForNone() {
+	    public static void showMenuForNone() throws MessagingException {
 				System.out.println("you are not user in this system ! \n please sign up ner user or again log in  ");
 				System.out.println("1.Enter To Sign Up");
 				System.out.println("2.Enter To log in");
@@ -254,7 +256,7 @@ public class rolemaintest {
 				showMenu(login(Email , pass));}
 		    }
 		
-	    public static boolean showMenuForCus() {
+	    public static boolean showMenuForCus() throws MessagingException {
 	        
 	    	for (int i =0 ; i<CustomerList.size();i++) {
 	   		 if(CustomerList.get(i).getEmail().equals(Email)) {
@@ -353,7 +355,7 @@ public class rolemaintest {
 
 	   
 	  
-	    private static void RequestanInstalltion(String currentuser) {
+	    private static void RequestanInstalltion(String currentuser) throws MessagingException {
 	    	 System.out.println("===== Request an Installtion =====");
 	         browseProducts();
 
@@ -396,7 +398,7 @@ public class rolemaintest {
 			catalog(infoProductcatalog());
 	    return 1; }
 
-	    private static void makePurchase(String customer) {
+	    private static void makePurchase(String customer) throws MessagingException {
 	        System.out.println("===== Make a Purchase =====");
 	        browseProducts();
 
@@ -746,7 +748,7 @@ public class rolemaintest {
 
 	        return true;
 	    }
-	    public static void loginmain() {
+	    public static void loginmain() throws MessagingException {
 	    	ProductInformation();
 			Scanner input2 = new Scanner(System.in);
 			System.out.println("\n========================");
@@ -836,7 +838,7 @@ public class rolemaintest {
 	    	return true;
 			
 	    }
-	    public static boolean showMenu(String type ) {
+	    public static boolean showMenu(String type ) throws MessagingException {
 	    	boolean flag=false;
 	    	if (type.equals("Customer"))
 	    	{flag= true; showMenuForCus();}

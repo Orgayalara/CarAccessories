@@ -1,3 +1,4 @@
+import javax.mail.MessagingException;
 
 public class Installar {
 
@@ -33,7 +34,7 @@ public class Installar {
 	public String getfullname() {
 		return fullName;
 	}
-	 public boolean reqstatus(String status,String email) {
+	 public boolean reqstatus(String status,String email) throws MessagingException {
 	                    SendMail.getSendEmail(status, email);
 	   return true;
 	 }

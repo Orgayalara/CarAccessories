@@ -8,8 +8,10 @@ import java.util.logging.Logger;
 
 public class SendMail {
     private SendMail(){}
-    public static void getSendEmail(String toUserMessage,String email){
+    public static void getSendEmail(String toUserMessage,String email) throws MessagingException{
         Logger logger = Logger.getLogger(SendMail.class.getName());
+        Logger logger2 = Logger.getLogger(SendMail.class.getName());
+
         // Recipient's email ID needs to be mentioned.
         String to = email;
 
@@ -70,12 +72,14 @@ public class SendMail {
             // Send message
             Transport.send(message);
             logger.log(Level.INFO,"Sent message successfully....");
-        } catch(MessagingException mex)
+      
+    } catch (NullPointerException e)
+    {
+      String message = "Unexpected NullPointerException in processing!";
+      logger.log(Level.INFO, message, e);
 
-        {
-            mex.printStackTrace();
-        }
-
+      throw new MessagingException(message, e);
+    }
     }
 
 
