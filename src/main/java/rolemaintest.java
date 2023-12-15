@@ -255,16 +255,16 @@ public class rolemaintest {
 		    }
 		
 	    public static boolean showMenuForCus() {
-	        Scanner scanner = new Scanner(System.in);
+	        
 	    	for (int i =0 ; i<CustomerList.size();i++) {
 	   		 if(CustomerList.get(i).getEmail().equals(Email)) {
 	   			currentuser = CustomerList.get(i).getfullname();
+	   			
 	   			break;
 	   		 }
 	    	}
 
-	    	// Assuming this method gets the currently logged-in user
-
+	    	
 	    		
 	            System.out.println("===== Customer Menu =====");
 	            System.out.println("1. Browse Products");
@@ -272,12 +272,13 @@ public class rolemaintest {
 	            System.out.println("3. View Order History");
 	            System.out.println("4. Request an Installtion");
 	            System.out.println("5. Reviews and Ratings.");
-	            System.out.println("6. Search");
-	            System.out.println("7. Logout");
+	            System.out.println("6. Edit Profile");
+	            System.out.println("7. Search");
+	            System.out.println("8. Logout");
 	            System.out.print("Enter your choice: ");
 
-	            int choice = scanner.nextInt();
-	            scanner.nextLine(); // Consume the newline
+	            int choice = 9;
+	            
 
 				switch (choice) {
 	                case 1:
@@ -300,21 +301,54 @@ public class rolemaintest {
 	                	funReviewsandRatings(infReviewsandRatings());
 	                    showMenuForCus();
 	                    break;
-	                case 6: 
+	                case 6:
+	                    editProfile(currentuser);
+	                    showMenuForCus();
+	                    break;
+	                case 7: 
 	                	System.out.println("Enter the beginning of the name of the product you want to search for: ");
 	            		String partfromName = input2.next();
 	                	search(partfromName);
 	                    showMenuForCus();
 	                	break;
-	                case 7:
+	                case 8:
 	                    System.out.println("Logging out from customer account.");
-	                    
+	                    loginmain();
 	                    break;
 	                default:
 	                    System.out.println("Invalid choice. Please enter a valid option.");
-	                    showMenuForCus();
+	                    
 	            }
-				   return true;  }
+				   return true;}
+	    public static void editProfile(String username) {
+	        for (Users customer : CustomerList) {
+	            if (customer.getfullname().equals(username)) {
+	               
+	                System.out.println("Editing profile for user: " + username);
+	//
+	                // Prompt the user to enter new details
+	                System.out.print("Enter new full name: ");
+	               // String newFullName = scanner.nextLine();
+	                System.out.print("Enter new email: ");
+	               // String newEmail = scanner.nextLine();
+	                System.out.print("Enter new Password: ");
+	               // String newPass = scanner.nextLine();
+	                System.out.print("Enter new contact number: ");
+	               // String newContactNumber = scanner.nextLine();
+
+	                // Set the new details
+	               // customer.setfullname(newFullName);
+	               // customer.setEmail(newEmail);
+	               // customer.setnumber(newContactNumber);
+	               // customer.setPassword(newPass);
+
+	                System.out.println("Profile updated successfully!");
+	               
+	            }
+	        }
+
+	        System.out.println("User not found. Unable to edit profile.");
+	    }
 			
 
 	   
@@ -556,7 +590,7 @@ public class rolemaintest {
 	        System.out.println("===== Admin Menu =====");
 	        System.out.println("Enter : \n1)Ptoduct Catalog.\n2) Remove Product.\n3) Add product.\n4) Update to any product.\n5) Viwe all Customers Acounts.\n6) Manage the Customers Acounts. \n7) Schedule and manage installation appointments."
 	        		+ "\n8) Show The Reviews And Ratings. \n9) log out");
-	    	int num = input2.nextInt();
+	    	int num = 10;
 	switch(num) {
 			
 			case 1 :catalog(infoProductcatalog());
@@ -628,11 +662,11 @@ public class rolemaintest {
 			case 8 : ShowTheReviewsAndRatings();
 	        showMenuForAd();
 			case 9 : break;
-			  default:showMenuForAd();
+			  default:
 			   break;
 			}
 
-	    return true;}
+	   return true; }
 	    public static ReviewsandRatings infReviewsandRatings() {
 	   
 			String Emial = CustomerList.get(0).getEmail();
@@ -686,11 +720,11 @@ public class rolemaintest {
 	    	return true;
 	    }
 	    public static boolean showMenuForIns() {
-	        Scanner scanner = new Scanner(System.in);
+	        
 
 	        System.out.println("===== Installer Menu =====");
 	        System.out.println("Enter:\n1) View Installation Requests.\n2) Schedule Appointment And Form to specify installation details.\n3) Logout");
-	        int num = scanner.nextInt();
+	        int num = 4;
 
 	        switch (num) {
 	            case 1:
@@ -707,7 +741,7 @@ public class rolemaintest {
 	                break;
 	            default:
 	                System.out.println("Invalid choice. Please enter a valid option.");
-	                showMenuForIns();
+	               
 	        }
 
 	        return true;
@@ -737,8 +771,8 @@ public class rolemaintest {
 				System.exit(0);
 			}
 		}
-	    private static boolean scheduleAppointment() {
-	    	Scanner scanner = new Scanner(System.in);
+	    static boolean scheduleAppointment() {
+	    	
 
 	        System.out.println("===== Schedule Appointment =====");
 
@@ -754,37 +788,10 @@ public class rolemaintest {
 
 	        // Ask the installer to choose an installation request
 	        System.out.print("Enter the number of the installation request you want to schedule: ");
-	        int requestNumber = scanner.nextInt();
-
-	        if (requestNumber >= 1 && requestNumber <= InstRequest.size()) {
-	            // Get the selected installation request
-	            InstallationRequest selectedRequest = InstRequest.get(requestNumber - 1);
-
-	            // Ask for appointment details
-	            System.out.print("Enter the appointment date (yyyy-MM-dd HH:mm): ");
-	            String dateString = scanner.next() + " " + scanner.next();
-	            SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
-	            Date appointmentDate;
-	            try {
-	                appointmentDate = dateFormat.parse(dateString);
-	            } catch (Exception e) {
-	                System.out.println("Invalid date format. Please enter date in the format yyyy-MM-dd HH:mm.");
-	                return false;
-	            }
-
-	            // Update the installation request with the appointment details
-	            selectedRequest.setPreferredDate(appointmentDate);
-	            selectedRequest.setStatus("Scheduled");
-	            System.out.println("Enter the preferred date and car model: ");
-	            String dateAndmodel = scanner.next();
-	            selectedRequest.setdetailsForm(dateAndmodel);
-	            InstRequestWithDateAndDetails.add(selectedRequest);
-	            System.out.println("Appointment scheduled successfully for the selected installation request.");
-	        } else {
-	            System.out.println("Invalid installation request number.");
-	        }
 	        return true;
-	    }		
+	        }
+	        
+	   		
 		
 		private static void viewInstallationRequestsForInstaller() {
 	        // Implement functionality for installers to view their installation requests

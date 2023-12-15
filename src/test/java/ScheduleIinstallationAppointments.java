@@ -16,6 +16,6 @@ public class ScheduleIinstallationAppointments {
 	public void specific_appointments_are_scheduled() {
 		
 		CarsAccessories.ProductInformation();
-		assertTrue(CarsAccessories.scheduleAppointment());	}
+		assertTrue(rolemaintest.scheduleAppointment());	}
 
 }

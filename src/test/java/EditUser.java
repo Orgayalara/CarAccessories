@@ -20,7 +20,7 @@ public class EditUser {
 
     @When("the user updates their profile with new information")
     public void the_user_updates_their_profile_with_new_information() {
-        CarsAccessories.editProfile(username);
+        rolemaintest.editProfile(username);
     }
 
     @Then("the user's profile should be updated successfully")
