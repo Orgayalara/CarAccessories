@@ -6,7 +6,6 @@ public class Admins {
 	private String email;
 	private String password;
 	public boolean loggedin = false;
-	public static ArrayList <Product> ProductList = new ArrayList<Product>();
 	public Admins () {}
 	public Admins( String fullName ,String email,String password) {
 		this.email = email;
