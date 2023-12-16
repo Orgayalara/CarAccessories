@@ -6,6 +6,7 @@ import java.util.Scanner;
 import javax.mail.MessagingException;
 
 public class CarsAccessories {
+	//new
 	static String currentuser;
 	static String Email;
 	private static String userType = "none" ;
