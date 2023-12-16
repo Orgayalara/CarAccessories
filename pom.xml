@@ -3,8 +3,50 @@
   <groupId>Cars</groupId>
   <artifactId>CarsAccessories</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  <properties>
+        <sonar.organization>orgayalara</sonar.organization>
+        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+        <maven.compiler.source>6</maven.compiler.source>
+        <maven.compiler.target>1.6</maven.compiler.target>
+    </properties>
+  
+  
+  <build>
+	  	  <plugins> 
+
+	  <plugin> 
+		<groupId>org.jacoco</groupId>
+	  <artifactId>jacoco-maven-plugin</artifactId>
+		<executions>
+			<execution>
+				<goals>
+					<goal>prepare-agent</goal>
+				</goals>
+			</execution>
+			<execution>
+				<id>generate-report</id>
+				<phase>verify</phase>
+				<goals>
+					<goal>report</goal>
+				</goals>
+				
+			</execution>
+	</executions>
+</plugin>
+	  	  </plugins> 
+
+  </build>
+  
+   
+
   <dependencies>
 	  <!-- https://mvnrepository.com/artifact/junit/junit -->
+	  <dependency> 
+					<groupId>org.jacoco</groupId>
+					<artifactId>jacoco-maven-plugin</artifactId>
+					<version>0.8.6</version>
+				</dependency>
+
 
 			<dependency>
 			<groupId>io.cucumber</groupId>
@@ -34,4 +76,5 @@
 			<scope>test</scope>
 			</dependency>
 </dependencies>
+
 </project>
