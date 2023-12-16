@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class Admins {
-
+//updated
 	private String fullName;
 	private String email;
 	private String password;
@@ -33,6 +33,5 @@ public class Admins {
 	public String getfullname() {
 		return fullName;
 	}
-
 	   	 
 }
