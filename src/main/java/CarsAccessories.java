@@ -119,12 +119,7 @@ public class CarsAccessories {
 	    			    		System.out.println(ProductList.get(i).getDetails());
 	    			    		System.out.print("type of car can apply  :");
 	    			    		System.out.println(ProductList.get(i).getType());
-	    			    	//	System.out.print("The product isInternal?  :");
-	    			    	//	System.out.println(ProductList.get(i).getInternal());
-	    			    	//	System.out.print("The product isExternal?  :");
-	    			    	//	System.out.println(ProductList.get(i).getExternal());
-	    			    	//	System.out.print("The product isElectronics?  :");
-	    			    	//	System.out.println(ProductList.get(i).getElectronics());
+	    			    	
 	    			    		System.out.println("____________________________________________________________________________________________________________");
 
 	    						 
