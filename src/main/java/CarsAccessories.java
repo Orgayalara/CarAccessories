@@ -325,7 +325,6 @@ public class CarsAccessories {
                 System.out.print("Enter new contact number: ");
                 String newContactNumber = scanner.nextLine();
 
-                // Set the new details
                 customer.setfullname(newFullName);
                 customer.setEmail(newEmail);
                 customer.setnumber(newContactNumber);
@@ -792,7 +791,6 @@ switch(num) {
                 return false;
             }
 
-            // Update the installation request with the appointment details
             selectedRequest.setPreferredDate(appointmentDate);
             selectedRequest.setStatus("Scheduled");
             System.out.println("Enter the preferred date and car model: ");
@@ -808,7 +806,6 @@ switch(num) {
     }		
 	
 	private static void viewInstallationRequestsForInstaller() {
-        // Implement functionality for installers to view their installation requests
         System.out.println("===== View Installation Requests =====");
         for (InstallationRequest request : InstRequest) {
             System.out.println("Product: " + request.getProduct().getName() +
@@ -836,14 +833,12 @@ switch(num) {
 		int numberOfCar = input2.nextInt();
 		System.out.println("Enter Your typeOfCar:");
 		String typeOfCar = input2.next();
-//		System.out.println("Enter Your historyOrder:");
-//		String historyOrder = input2.next();
+
 		Users newUser = new Users(fullName,Email,password,contactNumber,shippingAddress,numberOfCar,typeOfCar,"");
     	return newUser;
     	
     }
     public static boolean signup(Users U) {
-//    	print 1 enter name , email 
     	
     	CustomerList.add(U);
     	
