@@ -8,13 +8,14 @@
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
         <maven.compiler.source>6</maven.compiler.source>
         <maven.compiler.target>1.6</maven.compiler.target>
-      <sonar.coverage.exclusions>**/CarsAccessories/App.class,**/rolemaintese/App.class</sonar.coverage.exclusions>
-    <sonar.cpd.exclusions>**/CarsAccessories/App.java</sonar.cpd.exclusions>
+      <sonar.coverage.exclusions>src/main/java/rolemaintese.java,src/main/java/CarAccessories.java</sonar.coverage.exclusions>
+    <sonar.cpd.exclusions>src/main/java/CarAccessories.java</sonar.cpd.exclusions>
 
     </properties>
   
   
   <build>
+	
 	  	  <plugins> 
 
 	  <plugin> 
@@ -28,8 +29,8 @@
 				</goals>
 				<configuration>
                         <excludes>
-                            <exclude>**/CarsAccessories/App.class</exclude>
-                            <exclude>**/rolemaintese/App.class</exclude>
+                            <exclude>src/main/java/rolemaintese.java</exclude>
+                            <exclude>src/main/java/CarAccessories.java</exclude>
                         </excludes>
                     </configuration>
 			</execution>
