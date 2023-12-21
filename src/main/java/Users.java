@@ -37,17 +37,7 @@ public class Users {
         return email;
     }
 
-    public void UpdateEmail(String newEmail) {
-        this.email = newEmail;
-    }
-
-    public void UpdatecontactNumber(String newcontactNumber) {
-        this.contactNumber = newcontactNumber;
-    }
-
-    public void UpdateshippingAddress(String newshippingAddress) {
-        this.shippingAddress = newshippingAddress;
-    }
+   
 
     public void setEmail(String email) {
         this.email = email;
@@ -57,9 +47,7 @@ public class Users {
         return shippingAddress;
     }
 
-    public void setshippingaddress(String shippingAddress) {
-        this.shippingAddress = shippingAddress;
-    }
+ 
 
     public String getnumber() {
         return contactNumber;
@@ -89,25 +77,19 @@ public class Users {
         return numberOfCar;
     }
 
-    public void setnumberOfCar(int numberOfCar) {
-        this.numberOfCar = numberOfCar;
-    }
+
 
     public String gettypeOfCar() {
         return typeOfCar;
     }
 
-    public void settypeOfCar(String typeOfCar) {
-        this.typeOfCar = typeOfCar;
-    }
+  
 
     public String gethistoryOrder() {
         return historyOrder;
     }
 
-    public void sethistoryOrder(String historyOrder) {
-        this.historyOrder = historyOrder;
-    }
+  
 
     public String toString() {
         return "customer: " + getfullname() + " - Email: " + getEmail();

@@ -17,23 +17,12 @@ public class Installar {
 		return email;
 	}
 
-	public void setEmail(String email) {
-		this.email = email;
-	}
+
 	public String getPassword() {
 		return password;
 	}
 
-	public void setPassword(String password) {
-		this.password = password;
-	}
-	public void setfullname(String fullName) {
-		this.fullName = fullName;
-	}
-
-	public String getfullname() {
-		return fullName;
-	}
+	
 	 public boolean reqstatus(String status,String email) throws MessagingException {
 	                    SendMail.getSendEmail(status, email);
 	   return true;

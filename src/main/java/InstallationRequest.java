@@ -21,17 +21,12 @@ public class InstallationRequest {
         return product;
     }
 
-    public void setProduct(Product product) {
-        this.product = product;
-    }
+
 
     public Users getCustomer() {
         return customer;
     }
 
-    public void setCustomer(Users customer) {
-        this.customer = customer;
-    }
 
     public Date getPreferredDate() {
         return preferredDate;

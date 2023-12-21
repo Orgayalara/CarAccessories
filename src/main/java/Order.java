@@ -21,25 +21,12 @@ public class Order {
         return product;
     }
 
-    public void setProduct(Product product) {
-        this.product = product;
-    }
-
+   
     public Users getCustomer() {
         return customer;
     }
 
-    public void setCustomer(Users customer) {
-        this.customer = customer;
-    }
-
-    public Date getOrderDate() {
-        return orderDate;
-    }
-
-    public void setOrderDate(Date orderDate) {
-        this.orderDate = orderDate;
-    }
+   
 
 	public boolean getStatus() {
 		return status;
