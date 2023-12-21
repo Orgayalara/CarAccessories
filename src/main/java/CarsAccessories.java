@@ -55,21 +55,21 @@ public class CarsAccessories {
 			switch(n) {
 			
 			case 1:
-		             System.out.print("Internal :\n");
+		             System.out.print("Internal :\n");//TODO
 		             for (int i =0 ; i<ProductList.size();i++) {
     		         if(ProductList.get(i).getInternal() == true ) {
     			 
     			 
-    		    		System.out.print("name :");
-    		    		System.out.println(ProductList.get(i).getName());
-    		    		System.out.print("photo :");
-    		    		System.out.println(ProductList.get(i).getPhoto());
-    		    		System.out.print("Price :");
-    		    		System.out.println(ProductList.get(i).getPrice());
-    		    		System.out.print("Details :");
-    		    		System.out.println(ProductList.get(i).getDetails());
-    		    		System.out.print("type of car can apply  :");
-    		    		System.out.println(ProductList.get(i).getType());
+    		    		System.out.print("name :");//TODO
+    		    		System.out.println(ProductList.get(i).getName());//TODO
+    		    		System.out.print("photo :");//TODO
+    		    		System.out.println(ProductList.get(i).getPhoto());//TODO
+    		    		System.out.print("Price :");//TODO
+    		    		System.out.println(ProductList.get(i).getPrice());//TODO
+    		    		System.out.print("Details :");//TODO
+    		    		System.out.println(ProductList.get(i).getDetails());//TODO
+    		    		System.out.print("type of car can apply  :");//TODO
+    		    		System.out.println(ProductList.get(i).getType());//TODO
     		   
     		    		
     		    		System.out.println("____________________________________________________________________________________________________________");
@@ -80,21 +80,21 @@ public class CarsAccessories {
 		            
 		           break;
 			case 2 :
-				       System.out.print("External :\n");
+				       System.out.print("External :\n");//TODO
 	                   for (int i =0 ; i<ProductList.size();i++) {
 		               if(ProductList.get(i).getExternal() == true ) {
 			 
 
-				    		System.out.print("name :");
-				    		System.out.println(ProductList.get(i).getName());
-				    		System.out.print("photo :");
-				    		System.out.println(ProductList.get(i).getPhoto());
-				    		System.out.print("Price :");
-				    		System.out.println(ProductList.get(i).getPrice());
-				    		System.out.print("Details :");
-				    		System.out.println(ProductList.get(i).getDetails());
-				    		System.out.print("type of car can apply  :");
-				    		System.out.println(ProductList.get(i).getType());
+				    		System.out.print("name :");//TODO
+				    		System.out.println(ProductList.get(i).getName());//TODO
+				    		System.out.print("photo :");//TODO
+				    		System.out.println(ProductList.get(i).getPhoto());//TODO
+				    		System.out.print("Price :");//TODO
+				    		System.out.println(ProductList.get(i).getPrice());//TODO
+				    		System.out.print("Details :");//TODO
+				    		System.out.println(ProductList.get(i).getDetails());//TODO
+				    		System.out.print("type of car can apply  :");//TODO
+				    		System.out.println(ProductList.get(i).getType());//TODO
 				    
 				    		System.out.println("____________________________________________________________________________________________________________");
 
@@ -104,21 +104,21 @@ public class CarsAccessories {
 	                   
 	               break;
 			case 3 :
-				          System.out.print("Electronics :\n");
+				          System.out.print("Electronics :\n");//TODO
                           for (int i =0 ; i<ProductList.size();i++) {
 	                      if(ProductList.get(i).getElectronics() == true ) {
 		 
 
 	                    		System.out.print("name :");
-	    			    		System.out.println(ProductList.get(i).getName());
-	    			    		System.out.print("photo :");
-	    			    		System.out.println(ProductList.get(i).getPhoto());
-	    			    		System.out.print("Price :");
-	    			    		System.out.println(ProductList.get(i).getPrice());
-	    			    		System.out.print("Details :");
-	    			    		System.out.println(ProductList.get(i).getDetails());
-	    			    		System.out.print("type of car can apply  :");
-	    			    		System.out.println(ProductList.get(i).getType());
+	    			    		System.out.println(ProductList.get(i).getName());//TODO
+	    			    		System.out.print("photo :");//TODO
+	    			    		System.out.println(ProductList.get(i).getPhoto());//TODO
+	    			    		System.out.print("Price :");//TODO
+	    			    		System.out.println(ProductList.get(i).getPrice());//TODO
+	    			    		System.out.print("Details :");//TODO
+	    			    		System.out.println(ProductList.get(i).getDetails());//TODO
+	    			    		System.out.print("type of car can apply  :");//TODO
+	    			    		System.out.println(ProductList.get(i).getType());//TODO
 	    			    	
 	    			    		System.out.println("____________________________________________________________________________________________________________");
 
@@ -152,23 +152,23 @@ public class CarsAccessories {
     	ProductList.add(p5);
     }
     public static Product addInfoProduct() {
-    	System.out.println("Enter Your Name Product:");
+    	System.out.println("Enter Your Name Product:");//TODO
 		String Name = input2.next();
-		System.out.println("Enter Your Photo Product:");
+		System.out.println("Enter Your Photo Product:");//TODO
 		String Photo = input2.next();
-		System.out.println("Enter Your Price Product:");
+		System.out.println("Enter Your Price Product:");//TODO
 		int Price = input2.nextInt();
-		System.out.println("Enter Your Details Product:");
+		System.out.println("Enter Your Details Product:");//TODO
 		String Details = input2.next();
-		System.out.println("Enter Your Type Product:");
+		System.out.println("Enter Your Type Product:");//TODO
 		String Type = input2.next();
-		System.out.println("Enter the number of available pieces of the product:");
+		System.out.println("Enter the number of available pieces of the product:");//TODO
 		int Availability = input2.nextInt();
-		System.out.println("Is internal?:");
+		System.out.println("Is internal?:");//TODO
 		boolean isInternal = input2.nextBoolean();
-		System.out.println("Is External?:");
+		System.out.println("Is External?:");//TODO
 		boolean isExternal = input2.nextBoolean();
-		System.out.println("Is Electronics?:");
+		System.out.println("Is Electronics?:");//TODO
 		boolean isElectronics = input2.nextBoolean();
 		
 		Product Product1 = new Product(Name,Photo,Price,Details,Type,Availability,isInternal,isExternal,isElectronics);
@@ -177,19 +177,19 @@ public class CarsAccessories {
         
     }
     public static Users addInfoCustomersAcount() {
-    	System.out.println("Enter the  Name of Customer:");
+    	System.out.println("Enter the  Name of Customer:");//TODO
     	String Name = input2.next();
-    	System.out.println("Enter the  Email of Customer:");
+    	System.out.println("Enter the  Email of Customer:");//TODO
     	String Email = input2.next();
-    	System.out.println("Enter the  Password of Customer:");
+    	System.out.println("Enter the  Password of Customer:");//TODO
     	String Password = input2.next();
-    	System.out.println("Enter the  Contact Number of Customer:");
+    	System.out.println("Enter the  Contact Number of Customer:");//TODO
     	String  ContactNumber = input2.next();
-    	System.out.println("Enter the  Shipping Address of Customer:");
+    	System.out.println("Enter the  Shipping Address of Customer:");//TODO
     	String ShippingAddress = input2.next();
-    	System.out.println("Enter the  Number Of Car of Customer:");
+    	System.out.println("Enter the  Number Of Car of Customer:");//TODO
     	int  NumberOfCar = input2.nextInt();
-    	System.out.println("Enter the  Type Of Car of Customer:");
+    	System.out.println("Enter the  Type Of Car of Customer:");//TODO
     	String TypeOfCar = input2.next();
     	
     	String HistoryOrder = " ";
@@ -201,37 +201,37 @@ public class CarsAccessories {
   
     //    addProduct
     public static boolean addProduct(Product p) {
-		System.out.println(" in add !");
+		System.out.println(" in add !");//TODO
 
     	boolean flag=false; 
     	ProductList.add(p);
-		System.out.println("Done added !");
+		System.out.println("Done added !");//TODO
 		flag=true; 
     	return flag;
     }
     public static boolean addCustomersAcounts(Users p) {
     	boolean flag=false; 
     	CustomerList.add(p);
-		System.out.println("Done added !");
+		System.out.println("Done added !");//TODO
 		flag=true; 
     	return flag;
     }
 
     public static void showMenuForNone() throws MessagingException {
-			System.out.println("you are not user in this system ! \n please sign up ner user or again log in  ");
-			System.out.println("1.Enter To Sign Up");
-			System.out.println("2.Enter To log in");
+			System.out.println("you are not user in this system ! \n please sign up ner user or again log in  ");//TODO
+			System.out.println("1.Enter To Sign Up");//TODO
+			System.out.println("2.Enter To log in");//TODO
 			int num = input2.nextInt();
 			if ( num ==1 ) {
 				signup(FullInformationToSignUp());
 				num=2;
 			}
 			if (num==2){
-				System.out.println("Enter your Email please");
+				System.out.println("Enter your Email please");//TODO
 
 			
 			Email = input2.next();
-			System.out.println("Enter your password please");
+			System.out.println("Enter your password please");//TODO
 			String pass = input2.next();
 			
 			
@@ -250,16 +250,16 @@ public class CarsAccessories {
 
     	
     		
-            System.out.println("===== Customer Menu =====");
-            System.out.println("1. Browse Products");
-            System.out.println("2. Make a Purchase");
-            System.out.println("3. View Order History");
-            System.out.println("4. Request an Installtion");
-            System.out.println("5. Reviews and Ratings.");
-            System.out.println("6. Edit Profile");
-            System.out.println("7. Search");
-            System.out.println("8. Logout");
-            System.out.print("Enter your choice: ");
+            System.out.println("===== Customer Menu =====");//TODO
+            System.out.println("1. Browse Products");//TODO
+            System.out.println("2. Make a Purchase");//TODO
+            System.out.println("3. View Order History");//TODO
+            System.out.println("4. Request an Installtion");//TODO
+            System.out.println("5. Reviews and Ratings.");//TODO
+            System.out.println("6. Edit Profile");//TODO
+            System.out.println("7. Search");//TODO
+            System.out.println("8. Logout");//TODO
+            System.out.print("Enter your choice: ");//TODO
 
             int choice = scanner.nextInt();
             scanner.nextLine(); // Consume the newline
@@ -291,17 +291,17 @@ public class CarsAccessories {
                     showMenuForCus();
                     break;
                 case 7: 
-                	System.out.println("Enter the beginning of the name of the product you want to search for: ");
+                	System.out.println("Enter the beginning of the name of the product you want to search for: ");//TODO
             		String partfromName = input2.next();
                 	search(partfromName);
                     showMenuForCus();
                 	break;
                 case 8:
-                    System.out.println("Logging out from customer account.");
+                    System.out.println("Logging out from customer account.");//TODO
                     loginmain();
                     break;
                 default:
-                    System.out.println("Invalid choice. Please enter a valid option.");
+                    System.out.println("Invalid choice. Please enter a valid option.");//TODO
                     showMenuForCus();
             }
 			   return true;  }
@@ -316,13 +316,13 @@ public class CarsAccessories {
                 System.out.println("Editing profile for user: " + username);
 //
                 // Prompt the user to enter new details
-                System.out.print("Enter new full name: ");
+                System.out.print("Enter new full name: ");//TODO
                 String newFullName = scanner.nextLine();
-                System.out.print("Enter new email: ");
+                System.out.print("Enter new email: ");//TODO
                 String newEmail = scanner.nextLine();
-                System.out.print("Enter new Password: ");
+                System.out.print("Enter new Password: ");//TODO
                 String newPass = scanner.nextLine();
-                System.out.print("Enter new contact number: ");
+                System.out.print("Enter new contact number: ");//TODO
                 String newContactNumber = scanner.nextLine();
 
                 customer.setfullname(newFullName);
@@ -330,23 +330,23 @@ public class CarsAccessories {
                 customer.setnumber(newContactNumber);
                 customer.setPassword(newPass);
 
-                System.out.println("Profile updated successfully!");
+                System.out.println("Profile updated successfully!");//TODO
                 return;
             }
         }
 
-        System.out.println("User not found. Unable to edit profile.");
+        System.out.println("User not found. Unable to edit profile.");//TODO
     }
 
 
      
 	public static void RequestanInstalltion(String currentuser) throws MessagingException {
-    	 System.out.println("===== Request an Installtion =====");
+    	 System.out.println("===== Request an Installtion =====");//TODO
          browseProducts();
 
          Scanner scanner = new Scanner(System.in);
 
-         System.out.print("Enter the name of the product you want to Install: ");
+         System.out.print("Enter the name of the product you want to Install: ");//TODO
         
          String productName = scanner.nextLine();
          String reqdetails;
@@ -362,31 +362,31 @@ public class CarsAccessories {
                  		+ ""+instreq.getCustomer()+""
                  		+ ""+instreq.getProduct()+""
                  		+ ""+instreq.getPreferredDate();
-                System.out.println("installtion req is successful. Thank you for shopping!");
+                System.out.println("installtion req is successful. Thank you for shopping!");//TODO
                 SendMail.getSendEmail(reqdetails, instemail);
                  break;
              }
          }
 
          if (selectedProduct == null) {
-             System.out.println("Purchase unsuccessful. Product is unavailable!");
+             System.out.println("Purchase unsuccessful. Product is unavailable!");//TODO
          }
      }
    
 	
 	public static int browseProducts() {
-        System.out.println("===== Browse Products =====");
+        System.out.println("===== Browse Products =====");//TODO
      
 		catalog(infoProductcatalog());
     return 1; }
 
     public static void makePurchase(String customer) throws MessagingException {
-        System.out.println("===== Make a Purchase =====");
+        System.out.println("===== Make a Purchase =====");//TODO
         browseProducts();
 
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Enter the name of the product you want to purchase: ");
+        System.out.print("Enter the name of the product you want to purchase: ");//TODO
         String productName = scanner.nextLine();
         boolean state=false;
         Product selectedProduct = null;
@@ -397,22 +397,22 @@ public class CarsAccessories {
                 Order order = new Order(selectedProduct, CustomerList.get(0), new Date() , true);   
                 orders.add(order);
                 CustomerList.get(0).orderStatus(state, Email);
-                System.out.println("Purchase successful. Thank you for shopping!");
+                System.out.println("Purchase successful. Thank you for shopping!");//TODO
                 break;
             }
         }
 
         if (selectedProduct == null) {
-            System.out.println("Purchase unsuccessful. Product is unavailable!");
+            System.out.println("Purchase unsuccessful. Product is unavailable!");//TODO
         }
     }
   
 
     public static void viewOrderHistory(String customer) {
-        System.out.println("===== Order History =====");
+        System.out.println("===== Order History =====");//TODO
         for (Order order : orders) {
             if (order.getCustomer().getfullname().equals(customer)) {
-                System.out.println("Product: " + order.getProduct().getName() + " - Price: $" + order.getProduct().getPrice());
+                System.out.println("Product: " + order.getProduct().getName() + " - Price: $" + order.getProduct().getPrice());//TODO
             }
         }
     }
@@ -451,19 +451,19 @@ public class CarsAccessories {
        			 if(n == 7) {
        				 
        				ProductList.get(i).setInternal(b);
-       				System.out.println("The Edit isInternal is Done");
+       				System.out.println("The Edit isInternal is Done");//TODO
        				flag=true;	 
        			}
        			else if(n == 8) {
        				
        				ProductList.get(i).setExternal(b);
-       				System.out.println("The Edit isExternal is Done");
+       				System.out.println("The Edit isExternal is Done");//TODO
        				flag=true;	 
        			}
        			else if(n == 9) {
        				
        				ProductList.get(i).setElectronics(b);
-       				System.out.println("The Edit isElectronics is Done");
+       				System.out.println("The Edit isElectronics is Done");//TODO
        				flag=true;	 
        			}
               }
@@ -478,37 +478,37 @@ public class CarsAccessories {
    			
    			if(n == 1) {
    	    	    ProductList.get(i).setName(w);
-   	    	 System.out.println("The Edit Name is Done");
+   	    	 System.out.println("The Edit Name is Done");//TODO
    	    	 flag=true;
    			}
    			else if(n == 2)
    			{
    				ProductList.get(i).setPhoto(w);
-   				System.out.println("The Edit Photo is Done");
+   				System.out.println("The Edit Photo is Done");//TODO
    				flag=true;
    			}
    			 
    			else if(n == 3) {
    				 p = Integer.parseInt(w) ;
    				ProductList.get(i).setPrice(p);
-   				System.out.println("The Edit Price is Done");
+   				System.out.println("The Edit Price is Done");//TODO
    				flag=true;
    			}
    			else if(n == 4) {
    				
    				ProductList.get(i).setDetails(w);
-   				System.out.println("The Edit Details is Done");
+   				System.out.println("The Edit Details is Done");//TODO
    				flag=true;
    			}
    			else if(n == 5) {
    				ProductList.get(i).setType(s);
-   				System.out.println("The Edit Type is Done");
+   				System.out.println("The Edit Type is Done");//TODO
    				flag=true;	 
    			}
    			else if(n == 6) {
   				 p = Integer.parseInt(w) ;
   				ProductList.get(i).setAvailability(p);
-  				System.out.println("The Edit Availability is Done");
+  				System.out.println("The Edit Availability is Done");//TODO
   				flag=true;
   			}
    		
@@ -520,21 +520,21 @@ public class CarsAccessories {
     public static boolean ShowAllProduct() {
     boolean	flag=false;
     	for (Product Products : ProductList) {
-    		System.out.print("name :");
+    		System.out.print("name :");//TODO
     		System.out.println(Products.getName());
-    		System.out.print("photo :");
+    		System.out.print("photo :");//TODO
     		System.out.println(Products.getPhoto());
-    		System.out.print("Price :");
+    		System.out.print("Price :");//TODO
     		System.out.println(Products.getPrice());
-    		System.out.print("Details :");
+    		System.out.print("Details :");//TODO
     		System.out.println(Products.getDetails());
-    		System.out.print("type of car can apply  :");
+    		System.out.print("type of car can apply  :");//TODO
     		System.out.println(Products.getType());
-    		System.out.print("The product isInternal?  :");
+    		System.out.print("The product isInternal?  :");//TODO
     		System.out.println(Products.getInternal());
-    		System.out.print("The product isExternal?  :");
+    		System.out.print("The product isExternal?  :");//TODO
     		System.out.println(Products.getExternal());
-    		System.out.print("The product isElectronics?  :");
+    		System.out.print("The product isElectronics?  :");//TODO
     		System.out.println(Products.getElectronics());
     		System.out.println("____________________________________________________________________________________________________________");
 
@@ -547,23 +547,23 @@ public class CarsAccessories {
     	
     	 boolean	flag=false;
     	for (Users Customer : CustomerList) {
-    		System.out.print("fullName :");
+    		System.out.print("fullName :");//TODO
     		System.out.println(Customer.getfullname());
-    		System.out.print("Email :");
+    		System.out.print("Email :");//TODO
     		System.out.println(Customer.getEmail());
-    		System.out.print("Password :");
+    		System.out.print("Password :");//TODO
     		System.out.println(Customer.getPassword());
-    		System.out.print("contact Number :");
+    		System.out.print("contact Number :");//TODO
     		System.out.println(Customer.getnumber());
-    		System.out.print("shipping address  :");
+    		System.out.print("shipping address  :");//TODO
     		System.out.println(Customer.getshippingaddress());
-    		System.out.print("number Of Car :");
+    		System.out.print("number Of Car :");//TODO
     		System.out.println(Customer.getnumberOfCar());
-    		System.out.print("type Of Car :");
+    		System.out.print("type Of Car :");//TODO
     		System.out.println(Customer.gettypeOfCar());
-    		System.out.print("history Order :");
+    		System.out.print("history Order :");//TODO
     		System.out.println(Customer.gethistoryOrder());
-    		System.out.println("____________________________________________________________________________________________________________");
+    		System.out.println("____________________________________________________________________________________________________________");//TODO
 
     		flag=true;
     	}
@@ -571,9 +571,9 @@ public class CarsAccessories {
 		return flag;
     }
     public static boolean showMenuForAd( ) throws MessagingException {
-        System.out.println("===== Admin Menu =====");
+        System.out.println("===== Admin Menu =====");//TODO
         System.out.println("Enter : \n1)Ptoduct Catalog.\n2) Remove Product.\n3) Add product.\n4) Update to any product.\n5) Viwe all Customers Acounts.\n6) Manage the Customers Acounts. \n7) Schedule and manage installation appointments."
-        		+ "\n8) Show The Reviews And Ratings. \n9) log out");
+        		+ "\n8) Show The Reviews And Ratings. \n9) log out");//TODO
     	int num = input2.nextInt();
 switch(num) {
 		
@@ -583,10 +583,10 @@ switch(num) {
 				
 		  break; 
 		           
-		case  2 :System.out.println("Enter Name item to removing");
+		case  2 :System.out.println("Enter Name item to removing");//TODO
 		for (Product Products : ProductList) {
     		System.out.println(Products.getName());}
-		System.out.println("____________");
+		System.out.println("____________");//TODO
     		String s = input2.next();
 			removeProduct(s);
 			showMenuForAd();
@@ -596,23 +596,23 @@ switch(num) {
 		showMenuForAd();
 		break;
 			   
-		case 4 :System.out.println("Enter Name item to Editing");
+		case 4 :System.out.println("Enter Name item to Editing");//TODO
 		for (Product Products : ProductList) {
     		System.out.println(Products.getName());}
-		System.out.println("____________");
+		System.out.println("____________");//TODO
     		String e = input2.next();
-    		System.out.println("1.Edit Name  \n2.Edit Photo \n3.Edit Price \n4.Edit Details \n5.Edit Type \n6.Availability \n7.Edit isInternal \n8.Edit isExternal \n9.Edit isElectronics");
+    		System.out.println("1.Edit Name  \n2.Edit Photo \n3.Edit Price \n4.Edit Details \n5.Edit Type \n6.Availability \n7.Edit isInternal \n8.Edit isExternal \n9.Edit isElectronics");//TODO
     		int n = input2.nextInt();
     		
             if(n <= 6)
             {
-            	System.out.println("Enter the value:  ");
+            	System.out.println("Enter the value:  ");//TODO
     		    String w = input2.next();
     		    editProduct(e,n,w );
             }
             else if (n > 6)
             {
-            	System.out.println("Enter the value:  ");
+            	System.out.println("Enter the value:  ");//TODO
     		    boolean b = input2.nextBoolean();
             	editProductboolean(e,n,b );
             }
@@ -624,17 +624,17 @@ switch(num) {
 		showMenuForAd();
 		break;
 		
-		case 6 :System.out.println("1. Add Customer Acount.\n2. RemoveCustomer Acount.\n ");
+		case 6 :System.out.println("1. Add Customer Acount.\n2. RemoveCustomer Acount.\n ");//TODO
 		int number = input2.nextInt();
 		if(number == 1) {
 			addCustomersAcounts(addInfoCustomersAcount());
 		showMenuForAd();
 		}
 		if(number == 2) {
-			System.out.println("Enter Name of Acount to removing");
+			System.out.println("Enter Name of Acount to removing");//TODO
 			for (Users user : CustomerList) {
 	    		System.out.println(user.getfullname());}
-			System.out.println("____________");
+			System.out.println("____________");//TODO
 	    		String u = input2.next();
 				removeCustomersAcount(u);
 				showMenuForAd();
@@ -654,11 +654,11 @@ switch(num) {
     public static ReviewsandRatings infReviewsandRatings() {
    
 		String Emial = CustomerList.get(0).getEmail();
-		System.out.println("Enter the Name of Product:");
+		System.out.println("Enter the Name of Product:");//TODO
 		String NameOfProduct = input2.next();
-		System.out.println("Rate the product from 1 to 5, where 5 is the best: 1 2 3 4 5");
+		System.out.println("Rate the product from 1 to 5, where 5 is the best: 1 2 3 4 5");//TODO
 		int Rate = input2.nextInt();
-		System.out.println("Enter Your Review :");
+		System.out.println("Enter Your Review :");//TODO
 		String Review = input2.next();
 		
 		 ReviewsandRatings r= new ReviewsandRatings(Rate,Review,NameOfProduct,Emial);
@@ -668,22 +668,22 @@ switch(num) {
     public static  boolean funReviewsandRatings(ReviewsandRatings r) {
     	
     		ReviewsandRatingsList.add(r);
-    		System.out.println("Done added !");
+    		System.out.println("Done added !");//TODO
     	return true;
     }
     public static boolean ShowTheReviewsAndRatings() {
     
     		for (ReviewsandRatings show : ReviewsandRatingsList) {
-        		System.out.print("Email :");
+        		System.out.print("Email :");//TODO
         		System.out.println(show.getEmail());
-        		System.out.print("Name Of Product :");
+        		System.out.print("Name Of Product :");//TODO
         		System.out.println(show.getNameOfProduct());
-        		System.out.print("Rate :");
+        		System.out.print("Rate :");//TODO
         		System.out.println(show.getRatings());
-        		System.out.print("Review :");
+        		System.out.print("Review :");//TODO
         		System.out.println(show.getReviews());
         		
-        		System.out.println("____________________________________________________________________________________________________________");
+        		System.out.println("____________________________________________________________________________________________________________");//TODO
 
           
         }
@@ -698,16 +698,16 @@ switch(num) {
                     " - Customer: " + request.getCustomer().getfullname() +
                     " - Preferred Date: " + request.getPreferredDate() +
                     " - Status: " + request.getStatus() + 
-                    " - Details Form: " + request.getdetailsForm());
+                    " - Details Form: " + request.getdetailsForm());//TODO
         }
     	
     	return true;
     }
     public static boolean showMenuForIns() throws MessagingException {
-        Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);//TODO
 
-        System.out.println("===== Installer Menu =====");
-        System.out.println("Enter:\n1) View Installation Requests.\n2) Schedule Appointment And Form to specify installation details.\n3) Logout");
+        System.out.println("===== Installer Menu =====");//TODO
+        System.out.println("Enter:\n1) View Installation Requests.\n2) Schedule Appointment And Form to specify installation details.\n3) Logout");//TODO
         int num = scanner.nextInt();
 
         switch (num) {
@@ -720,11 +720,11 @@ switch(num) {
                 showMenuForIns();
                 break;
             case 3:
-                System.out.println("Logging out from installer account.");
+                System.out.println("Logging out from installer account.");//TODO
                 loginmain();
                 break;
             default:
-                System.out.println("Invalid choice. Please enter a valid option.");
+                System.out.println("Invalid choice. Please enter a valid option.");//TODO
                 showMenuForIns();
         }
 
@@ -733,25 +733,25 @@ switch(num) {
     public static void loginmain() throws MessagingException {
     	ProductInformation();
 		Scanner input2 = new Scanner(System.in);
-		System.out.println("\n========================");
-		System.out.println("1.Sign Up");
-		System.out.println("2.log in");
-		System.out.println("3.Exit the program");
-		System.out.println("========================");
+		System.out.println("\n========================");//TODO
+		System.out.println("1.Sign Up");//TODO
+		System.out.println("2.log in");//TODO
+		System.out.println("3.Exit the program");//TODO
+		System.out.println("========================");//TODO
 		int num = input2.nextInt();
 		if ( num ==1 ) {
 			signup(FullInformationToSignUp());
 			num=2;
 		}
 		if (num==2){
-			System.out.println("Enter your Email please");
+			System.out.println("Enter your Email please");//TODO
 		Email = input2.next();
-		System.out.println("Enter your password please");
+		System.out.println("Enter your password please");//TODO
 		String pass = input2.next();
 		showMenu(login(Email , pass));}
 		if (num==3)
 		{
-			System.out.println("Thanks for visiting the programs");
+			System.out.println("Thanks for visiting the programs");//TODO
 			System.exit(0);
 		}
 	}
@@ -759,10 +759,10 @@ switch(num) {
     	boolean flag=false;
     	Scanner scanner = new Scanner(System.in);
 
-        System.out.println("===== Schedule Appointment =====");
+        System.out.println("===== Schedule Appointment =====");//TODO
 
         // Display available installation requests
-        System.out.println("Available Installation Requests:");
+        System.out.println("Available Installation Requests:");//TODO
         for (int i = 0; i < InstRequest.size(); i++) {
             InstallationRequest request = InstRequest.get(i);
             System.out.println((i + 1) + ") Product: " + request.getProduct().getName() +
@@ -772,7 +772,7 @@ switch(num) {
         }
          flag = true;
         // Ask the installer to choose an installation request
-        System.out.print("Enter the number of the installation request you want to schedule: ");
+        System.out.print("Enter the number of the installation request you want to schedule: ");//TODO
         int requestNumber = scanner.nextInt();
 
         if (requestNumber >= 1 && requestNumber <= InstRequest.size()) {
@@ -780,38 +780,38 @@ switch(num) {
             InstallationRequest selectedRequest = InstRequest.get(requestNumber - 1);
 
             // Ask for appointment details
-            System.out.print("Enter the appointment date (yyyy-MM-dd HH:mm): ");
+            System.out.print("Enter the appointment date (yyyy-MM-dd HH:mm): ");//TODO
             String dateString = scanner.next() + " " + scanner.next();
             SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
             Date appointmentDate;
             try {
                 appointmentDate = dateFormat.parse(dateString);
             } catch (Exception e) {
-                System.out.println("Invalid date format. Please enter date in the format yyyy-MM-dd HH:mm.");
+                System.out.println("Invalid date format. Please enter date in the format yyyy-MM-dd HH:mm.");//TODO
                 return false;
             }
 
             selectedRequest.setPreferredDate(appointmentDate);
             selectedRequest.setStatus("Scheduled");
-            System.out.println("Enter the preferred date and car model: ");
+            System.out.println("Enter the preferred date and car model: ");//TODO
             String dateAndmodel = scanner.next();
             selectedRequest.setdetailsForm(dateAndmodel);
             InstRequestWithDateAndDetails.add(selectedRequest);
-            System.out.println("Appointment scheduled successfully for the selected installation request.");
+            System.out.println("Appointment scheduled successfully for the selected installation request.");//TODO
         } else {
-            System.out.println("Invalid installation request number.");
+            System.out.println("Invalid installation request number.");//TODO
         }
         return true;
         
     }		
 	
 	private static void viewInstallationRequestsForInstaller() {
-        System.out.println("===== View Installation Requests =====");
+        System.out.println("===== View Installation Requests =====");//TODO
         for (InstallationRequest request : InstRequest) {
-            System.out.println("Product: " + request.getProduct().getName() +
+        	  System.out.println("Product: " + request.getProduct().getName() +
                     " - Customer: " + request.getCustomer().getfullname() +
                     " - Preferred Date: " + request.getPreferredDate() +
-                    " - Status: " + request.getStatus());
+                    " - Status: " + request.getStatus());//TODO
         }
 
         
@@ -819,19 +819,19 @@ switch(num) {
 
     public static Users FullInformationToSignUp() {
     
-		System.out.println("Enter Your fullName:");
+		System.out.println("Enter Your fullName:");//TODO
 		String fullName = input2.next();
-		System.out.println("Enter Your Email:");
+		System.out.println("Enter Your Email:");//TODO
 		String Email = input2.next();
-		System.out.println("Enter Your password:");
+		System.out.println("Enter Your password:");//TODO
 		String password = input2.next();
-		System.out.println("Enter Your contactNumber:");
+		System.out.println("Enter Your contactNumber:");//TODO
 		String contactNumber = input2.next();
-		System.out.println("Enter Your shippingAddress:");
+		System.out.println("Enter Your shippingAddress:");//TODO
 		String shippingAddress = input2.next();
-		System.out.println("Enter Your numberOfCar:");
+		System.out.println("Enter Your numberOfCar:");//TODO
 		int numberOfCar = input2.nextInt();
-		System.out.println("Enter Your typeOfCar:");
+		System.out.println("Enter Your typeOfCar:");//TODO
 		String typeOfCar = input2.next();
 
 		Users newUser = new Users(fullName,Email,password,contactNumber,shippingAddress,numberOfCar,typeOfCar,"");
@@ -842,7 +842,7 @@ switch(num) {
     	
     	CustomerList.add(U);
     	
-		System.out.println("done ! you are user please log in ");
+		System.out.println("done ! you are user please log in ");//TODO
 		
 		
 
@@ -877,23 +877,23 @@ return flag;
 		}
 		for (Product product: SearchList)
 		{
-			System.out.print("name :");
-    		System.out.println(product.getName());
-    		System.out.print("photo :");
+			System.out.print("name :");//TODO
+    		System.out.println(product.getName());//TODO
+    		System.out.print("photo :");//TODO
     		System.out.println(product.getPhoto());
-    		System.out.print("Price :");
+    		System.out.print("Price :");//TODO
     		System.out.println(product.getPrice());
-    		System.out.print("Details :");
-    		System.out.println(product.getDetails());
-    		System.out.print("type of car can apply  :");
-    		System.out.println(product.getType());
-    		System.out.print("The product isInternal?  :");
+    		System.out.print("Details :");//TODO
+    		System.out.println(product.getDetails());//TODO
+    		System.out.print("type of car can apply  :");//TODO
+    		System.out.println(product.getType());//TODO
+    		System.out.print("The product isInternal?  :");//TODO
     		System.out.println(product.getInternal());
-    		System.out.print("The product isExternal?  :");
+    		System.out.print("The product isExternal?  :");//TODO
     		System.out.println(product.getExternal());
-    		System.out.print("The product isElectronics?  :");
-    		System.out.println(product.getElectronics());
-    		System.out.println("____________________________________________________________________________________________________________");
+    		System.out.print("The product isElectronics?  :");//TODO
+    		System.out.println(product.getElectronics());//TODO
+    		System.out.println("____________________________________________________________________________________________________________");//TODO
 
 		}
 
@@ -971,25 +971,25 @@ for (Installar installar : InstallarList) {
 		// TODO Auto-generated method stub
 		ProductInformation();
 		Scanner input2 = new Scanner(System.in);
-		System.out.println("========================");
-		System.out.println("1.Sign Up");
-		System.out.println("2.log in");
-		System.out.println("3.Exit the program");
-		System.out.println("========================");
+		System.out.println("========================");//TODO
+		System.out.println("1.Sign Up");//TODO
+		System.out.println("2.log in");//TODO
+		System.out.println("3.Exit the program");//TODO
+		System.out.println("========================");//TODO
 		int num = input2.nextInt();
 		if ( num ==1 ) {
 			signup(FullInformationToSignUp());
 			num=2;
 		}
 		if (num==2){
-			System.out.println("Enter your Email please");
+			System.out.println("Enter your Email please");//TODO
 		Email = input2.next();
-		System.out.println("Enter your password please");
+		System.out.println("Enter your password please");//TODO
 		String pass = input2.next();
 		showMenu(login(Email , pass));}
 		if (num==3)
 		{
-			System.out.println("Thanks for visiting the programs");
+			System.out.println("Thanks for visiting the programs");//TODO
 			System.exit(0);
 		}
 	}
