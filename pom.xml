@@ -8,8 +8,9 @@
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
         <maven.compiler.source>6</maven.compiler.source>
         <maven.compiler.target>1.6</maven.compiler.target>
-        <sonar.exclusions>**/CarsAccessories/App.java</sonar.exclusions>
-                <sonar.exclusions>**/rolemaintese/App.java</sonar.exclusions>
+
+      <sonar.coverage.exclusions>**/CarsAccessories/App.class,**/rolemaintese/App.class</sonar.coverage.exclusions>
+    <sonar.cpd.exclusions>**/CarsAccessories/App.java,**/rolemaintese/App.java</sonar.cpd.exclusions>
 
     </properties>
   
@@ -25,6 +26,12 @@
 				<goals>
 					<goal>prepare-agent</goal>
 				</goals>
+				<configuration>
+                        <excludes>
+                            <exclude>**/CarsAccessories/App.class</exclude>
+                            <exclude>**/rolemaintese/App.class</exclude>
+                        </excludes>
+                    </configuration>
 			</execution>
 			<execution>
 				<id>generate-report</id>
