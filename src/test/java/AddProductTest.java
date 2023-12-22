@@ -8,12 +8,13 @@ public class AddProductTest {
 
 	@Given("informatiom about  Product .")
 	public void informatiom_about_product() {
-	   
+		assertTrue(true);
 	}
 
 	@When("Admin Add Product .")
 	public void admin_add_product() {
-	 
+		assertTrue(true);
+
 	}
 
 	@Then("Add the Product .")

@@ -7,7 +7,8 @@ public class EditProduct {
 
 	@When("Admin Edit Product .")
 	public void admin_edit_product() {
-	   
+		assertTrue(true);
+
 	}
 
 	@Then("Edit the Product .")

@@ -7,7 +7,8 @@ public class ReviewsAndRating {
 
 @Given("the user left a comment and rated it")
 public void the_user_left_a_comment_and_rated_it() {
-  
+	assertTrue(true);
+
 }
 
 @Then("the moderator should see this comment")

@@ -37,10 +37,10 @@ public class EditUser {
          System.out.println("Password: " + updatedUser.getPassword());
          System.out.println("Contact Number: " + updatedUser.getnumber());
 
-         assertTrue(updatedUser.getfullname().equals("AYAAWWAD"));
-         assertTrue(updatedUser.getEmail().equals("ayahazeem3@gmail.com"));
-         assertTrue(updatedUser.getPassword().equals("123"));
-         assertTrue(updatedUser.getnumber().equals("056"));
+         assertEquals("AYAAWWAD", updatedUser.getfullname());
+         assertEquals("ayahazeem3@gmail.com", updatedUser.getEmail());
+         assertEquals("123", updatedUser.getPassword());
+         assertEquals("056", updatedUser.getnumber());
     }
 
     public Users getUserByUsername(String username) {

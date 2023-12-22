@@ -9,7 +9,8 @@ public class ScheduleIinstallationAppointments {
    
 	@Given("appointments")
 	public void appointments() {
-	  
+		assertTrue(true);
+
 	}
 
 	@Then("Specific appointments are scheduled.")

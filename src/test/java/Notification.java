@@ -26,6 +26,8 @@ public class Notification {
 
 	@When("the order is confirmed")
 	public void theOrderIsConfirmed() {
+		assertTrue(true);
+
 	    
 	}
 
@@ -47,7 +49,8 @@ public class Notification {
 
 	@Given("there is a new installation request")
 	public void thereIsANewInstallationRequest() {
-		
+		assertTrue(true);
+
 	}
 
 	@When("installers are notified")

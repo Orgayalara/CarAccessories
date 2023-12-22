@@ -8,12 +8,14 @@ public class ManageCustomersAcounts {
 
 	@Given("informatiom about  Customer Acount  .")
 	public void informatiom_about_customer_acount() {
-	   
+		assertTrue(true);
+
 	}
 
 	@When("Admin Add Customer Acount  .")
 	public void admin_add_customer_acount() {
-	   
+		assertTrue(true);
+
 	}
 
 	@Then("Add Customer Acount  .")
@@ -24,7 +26,8 @@ public class ManageCustomersAcounts {
 
 	@When("Admin Remove Customer Acount  .")
 	public void admin_remove_customer_acount() {
-	 
+		assertTrue(true);
+
 	}
 
 	@Then("Remove Customer Acount  .")

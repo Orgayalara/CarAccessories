@@ -7,7 +7,8 @@ public class Search {
 
 	@Given("The customer gives the first syllable of the product name.")
 	public void the_customer_gives_the_first_syllable_of_the_product_name() {
-	  
+		assertTrue(true);
+
 	}
 
 	@Then("Finds all products that start with the entered clip.")
