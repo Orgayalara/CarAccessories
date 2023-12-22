@@ -9,6 +9,22 @@ import javax.mail.MessagingException;
 import com.sun.tools.javac.main.Main;
 
 public class CarsAccessories {
+	private static final String name = "name";
+	private static final String photo = "photo";
+	private static final String price = "price";
+	private static final String details = "details";
+	private static final String type = "type of car can apply";
+	private static final String KIA_sorento ="KIA sorento";
+	private static final String color ="the color is black";
+	private static final String Done ="Done added !";
+	private static final String email ="Enter your Email please";
+	private static final String Pass ="Enter your password please";
+	private static final String Customer =" - Customer: ";
+	private static final String Date =" - Preferred Date: ";
+	private static final String Status =" - Status: ";
+	private static final String sdash ="____________";
+	private static final String Ddash ="========================";
+	private static final String dash = "____________________________________________________________________________________________________________";
 	private static final Logger LOGGER =  Logger.getLogger(CarsAccessories.class.getName());
 	//new
 	static String currentuser;
@@ -31,14 +47,14 @@ public class CarsAccessories {
 		return userType;
 	}
 	 public static void OrderInformation() {
-		 Product sampleProduct = new Product("Mirror", "https://m.indiamart.com/impcat/side-mirrors.html", 100, "The Color is red", "BMW", 5 , false , true , false);
+		 Product sampleProduct = new Product("Mirror", " ", 100, "The Color is red", "BMW", 5 , false , true , false);
 	        Users sampleCustomer = new Users("Loai", "Loai@example.com", "48965", "123456", "Nablus", 1710, "Sample Car", "");
 
 	        Order newOrder = new Order(sampleProduct, sampleCustomer, new Date(),true);
 	        orders.add(newOrder);
 	 }
 	 public static void InstRequestInformation() {
-		  Product sampleProduct = new Product("MudFlap","https://m.indiamart.com/proddetail/renault-duster-hood-15550058133.html",890,"the color is Pink","Honday", 4 , false , true , false);
+		  Product sampleProduct = new Product("MudFlap","",890,"the color is Pink","Honday", 4 , false , true , false);
 	        Users sampleCustomer = new Users("Ashraf", "Ashraf@example.com", "7895", "123456", "Awarta", 230, "Sample Car", "");
 
 	        InstallationRequest request1 = new InstallationRequest(sampleProduct, sampleCustomer, new Date(), "Pending");
@@ -63,13 +79,13 @@ public class CarsAccessories {
 		             for (int i =0 ; i<ProductList.size();i++) {
     		         if(ProductList.get(i).getInternal() == true ) {
     			 
-    		        	  LOGGER.info("name: " + ProductList.get(i).getName());
-		            	   LOGGER.info("photo: " + ProductList.get(i).getPhoto());
-		            	   LOGGER.info("Price: " + String.valueOf(ProductList.get(i).getPrice()));
-		            	   LOGGER.info("Details: " + ProductList.get(i).getDetails());
-		            	   LOGGER.info("type of car can apply: " + ProductList.get(i).getType());
+    		        	  LOGGER.info(name + ProductList.get(i).getName());
+		            	   LOGGER.info(photo + ProductList.get(i).getPhoto());
+		            	   LOGGER.info(price + String.valueOf(ProductList.get(i).getPrice()));
+		            	   LOGGER.info(details + ProductList.get(i).getDetails());
+		            	   LOGGER.info(type + ProductList.get(i).getType());
     		    		
-    		        	 LOGGER.info("____________________________________________________________________________________________________________");
+    		        	 LOGGER.info(dash);
 
     					 
     		             }
@@ -81,14 +97,14 @@ public class CarsAccessories {
 	                   for (int i =0 ; i<ProductList.size();i++) {
 		               if(ProductList.get(i).getExternal() == true ) {
 			 
-		            	   LOGGER.info("name: " + ProductList.get(i).getName());
-		            	   LOGGER.info("photo: " + ProductList.get(i).getPhoto());
-		            	   LOGGER.info("Price: " + String.valueOf(ProductList.get(i).getPrice()));
-		            	   LOGGER.info("Details: " + ProductList.get(i).getDetails());
-		            	   LOGGER.info("type of car can apply: " + ProductList.get(i).getType());
+		            	   LOGGER.info(name + ProductList.get(i).getName());
+		            	   LOGGER.info(photo + ProductList.get(i).getPhoto());
+		            	   LOGGER.info(price + String.valueOf(ProductList.get(i).getPrice()));
+		            	   LOGGER.info(details + ProductList.get(i).getDetails());
+		            	   LOGGER.info(type + ProductList.get(i).getType());
 		               
 				    
-		               LOGGER.info("____________________________________________________________________________________________________________");
+		               LOGGER.info(dash);
 
 							 
 		                 }
@@ -100,11 +116,11 @@ public class CarsAccessories {
                           for (int i =0 ; i<ProductList.size();i++) {
 	                      if(ProductList.get(i).getElectronics() == true ) {
 		 
-	                    	  LOGGER.info("name: " + ProductList.get(i).getName());
-	                    	  LOGGER.info("photo: " + ProductList.get(i).getPhoto());
-	                    	  LOGGER.info("Price: " + String.valueOf(ProductList.get(i).getPrice()));
-	                    	  LOGGER.info("Details: " + ProductList.get(i).getDetails());
-	                    	  LOGGER.info("type of car can apply: " + ProductList.get(i).getType());
+	                    	  LOGGER.info(name + ProductList.get(i).getName());
+	                    	  LOGGER.info(photo + ProductList.get(i).getPhoto());
+	                    	  LOGGER.info(price + String.valueOf(ProductList.get(i).getPrice()));
+	                    	  LOGGER.info(details + ProductList.get(i).getDetails());
+	                    	  LOGGER.info(type + ProductList.get(i).getType());
 	                      
 
 	    			    	
@@ -124,11 +140,11 @@ public class CarsAccessories {
      public static void ProductInformation() {
     	
 
-    	Product p1 = new Product("Hood","https://m.indiamart.com/proddetail/renault-duster-hood-15550058133.html",5500,"the color is black","KIA sorento",2, false , true , false);
-    	Product p2 = new Product("Serpentine_belt","https://m.indiamart.com/proddetail/renault-duster-hood-15550058133.html",100,"the color is black","KIA sorento", 3, false , false , true);
-    	Product p3 = new Product("Holloy_wheel","https://m.indiamart.com/proddetail/renault-duster-hood-15550058133.html",1600,"the color is black","KIA sorento", 6, false , true , false);
-    	Product p4 = new Product("Vehicle_mat","https://m.indiamart.com/proddetail/renault-duster-hood-15550058133.html",900,"the color is black","KIA sorento",1 , true , false, false);
-    	Product p5 = new Product("Mud_Flap","https://m.indiamart.com/proddetail/renault-duster-hood-15550058133.html",500,"the color is black","KIA sorento",4, false , true , false);
+    	Product p1 = new Product("Hood"," ",5500,color,KIA_sorento,2, false , true , false);
+    	Product p2 = new Product("Serpentine_belt"," ",100,color,KIA_sorento, 3, false , false , true);
+    	Product p3 = new Product("Holloy_wheel"," ",1600,color,KIA_sorento, 6, false , true , false);
+    	Product p4 = new Product("Vehicle_mat"," ",900,color,KIA_sorento,1 , true , false, false);
+    	Product p5 = new Product("Mud_Flap"," ",500,color,KIA_sorento,4, false , true , false);
 
     	ProductList.add(p1);
     	ProductList.add(p2);
@@ -193,14 +209,14 @@ public class CarsAccessories {
 
     	boolean flag=false; 
     	ProductList.add(p);
-    	 LOGGER.info("Done added !");
+    	 LOGGER.info(Done);
 		flag=true; 
     	return flag;
     }
     public static boolean addCustomersAcounts(Users p) {
     	boolean flag=false; 
     	CustomerList.add(p);
-    	 LOGGER.info("Done added !");
+    	 LOGGER.info(Done);
 		flag=true; 
     	return flag;
     }
@@ -215,11 +231,11 @@ public class CarsAccessories {
 				num=2;
 			}
 			if (num==2){
-				 LOGGER.info("Enter your Email please");
+				 LOGGER.info(email);
 
 			
 			Email = input2.next();
-			 LOGGER.info("Enter your password please");
+			 LOGGER.info(Pass);
 			String pass = input2.next();
 			
 			
@@ -505,24 +521,7 @@ public class CarsAccessories {
    	 
    	 return flag;
    }
-    public static boolean ShowAllProduct() {
-    boolean	flag=false;
-    	for (Product Products : ProductList) {
-    		LOGGER.info("name: " + Products.getName());
-    		LOGGER.info("photo: " + Products.getPhoto());
-    		LOGGER.info("Price: " + Products.getPrice());
-    		LOGGER.info("Details: " + Products.getDetails());
-    		LOGGER.info("type of car can apply: " + Products.getType());
-    		LOGGER.info("The product isInternal?: " + Products.getInternal());
-    		LOGGER.info("The product isExternal?: " + Products.getExternal());
-    		LOGGER.info("The product isElectronics?: " + Products.getElectronics());
-        
-    		LOGGER.info("____________________________________________________________________________________________________________");
-
-    		flag=true;
-    	}
-    	
-		return flag;}
+  
     
     public static boolean viweCustomersAcounts() {
     	
@@ -537,7 +536,7 @@ public class CarsAccessories {
     		LOGGER.info("type Of Car: " + Customer.gettypeOfCar());
     		LOGGER.info("history Order: " + Customer.gethistoryOrder());
         
-    		LOGGER.info("____________________________________________________________________________________________________________");//TODO
+    		LOGGER.info(dash);//TODO
 
     		flag=true;
     	}
@@ -560,7 +559,7 @@ switch(num) {
 		case  2 :LOGGER.info("Enter Name item to removing");
 		for (Product Products : ProductList) {
 			LOGGER.info(Products.getName());}
-		LOGGER.info("____________");
+		LOGGER.info(sdash);
     		String s = input2.next();
 			removeProduct(s);
 			showMenuForAd();
@@ -573,7 +572,7 @@ switch(num) {
 		case 4 :LOGGER.info("Enter Name item to Editing");
 		for (Product Products : ProductList) {
 			LOGGER.info(Products.getName());}
-		LOGGER.info("____________");
+		LOGGER.info(sdash);
     		String e = input2.next();
     		LOGGER.info("1.Edit Name  \n2.Edit Photo \n3.Edit Price \n4.Edit Details \n5.Edit Type \n6.Availability \n7.Edit isInternal \n8.Edit isExternal \n9.Edit isElectronics");
     		int n = input2.nextInt();
@@ -608,7 +607,7 @@ switch(num) {
 			LOGGER.info("Enter Name of Acount to removing");
 			for (Users user : CustomerList) {
 				LOGGER.info(user.getfullname());}
-			LOGGER.info("____________");
+			LOGGER.info(sdash);
 	    		String u = input2.next();
 				removeCustomersAcount(u);
 				showMenuForAd();
@@ -642,7 +641,7 @@ switch(num) {
     public static  boolean funReviewsandRatings(ReviewsandRatings r) {
     	
     		ReviewsandRatingsList.add(r);
-    		LOGGER.info("Done added !");
+    		LOGGER.info(Done);
     	return true;
     }
     public static boolean ShowTheReviewsAndRatings() {
@@ -653,7 +652,7 @@ switch(num) {
     			LOGGER.info("Rate: " + show.getRatings());
     			LOGGER.info("Review: " + show.getReviews());
         		
-        		LOGGER.info("____________________________________________________________________________________________________________");
+        		LOGGER.info(dash);
 
           
         }
@@ -665,9 +664,9 @@ switch(num) {
     	for (int i = 0; i < InstRequestWithDateAndDetails.size(); i++) {
             InstallationRequest request = InstRequestWithDateAndDetails.get(i);
             LOGGER.info((i + 1) + ") Product: " + request.getProduct().getName() +
-                    " - Customer: " + request.getCustomer().getfullname() +
-                    " - Preferred Date: " + request.getPreferredDate() +
-                    " - Status: " + request.getStatus() + 
+            		Customer + request.getCustomer().getfullname() +
+                    Date+ request.getPreferredDate() +
+                    Status + request.getStatus() + 
                     " - Details Form: " + request.getdetailsForm());
         }
     	
@@ -707,16 +706,16 @@ switch(num) {
 		LOGGER.info("1.Sign Up");
 		LOGGER.info("2.log in");
 		LOGGER.info("3.Exit the program");
-		LOGGER.info("========================");
+		LOGGER.info(Ddash);
 		int num = input2.nextInt();
 		if ( num ==1 ) {
 			signup(FullInformationToSignUp());
 			num=2;
 		}
 		if (num==2){
-			LOGGER.info("Enter your Email please");
+			LOGGER.info(email);
 		Email = input2.next();
-		LOGGER.info("Enter your password please");
+		LOGGER.info(Pass);
 		String pass = input2.next();
 		showMenu(login(Email , pass));}
 		if (num==3)
@@ -736,9 +735,9 @@ switch(num) {
         for (int i = 0; i < InstRequest.size(); i++) {
             InstallationRequest request = InstRequest.get(i);
             LOGGER.info((i + 1) + ") Product: " + request.getProduct().getName() +
-                    " - Customer: " + request.getCustomer().getfullname() +
-                    " - Preferred Date: " + request.getPreferredDate() +
-                    " - Status: " + request.getStatus());
+            		Customer + request.getCustomer().getfullname() +
+            		Date+ request.getPreferredDate() +
+            		Status + request.getStatus());
         }
          flag = true;
         // Ask the installer to choose an installation request
@@ -779,9 +778,9 @@ switch(num) {
 		LOGGER.info("===== View Installation Requests =====");
         for (InstallationRequest request : InstRequest) {
         	LOGGER.info("Product: " + request.getProduct().getName() +
-                    " - Customer: " + request.getCustomer().getfullname() +
-                    " - Preferred Date: " + request.getPreferredDate() +
-                    " - Status: " + request.getStatus());
+        			Customer + request.getCustomer().getfullname() +
+        			Date + request.getPreferredDate() +
+        			Status + request.getStatus());
         }
 
         
@@ -847,16 +846,16 @@ return flag;
 		}
 		for (Product product: SearchList)
 		{
-			LOGGER.info("name: " + product.getName());
-			LOGGER.info("photo: " + product.getPhoto());
-	        LOGGER.info("Price: " + product.getPrice());
-	        LOGGER.info("Details: " + product.getDetails());
-	        LOGGER.info("type of car can apply: " + product.getType());
+			LOGGER.info(name + product.getName());
+			LOGGER.info(photo + product.getPhoto());
+	        LOGGER.info(price + product.getPrice());
+	        LOGGER.info(details + product.getDetails());
+	        LOGGER.info(type + product.getType());
 	        LOGGER.info("The product isInternal?: " + product.getInternal());
 	        LOGGER.info("The product isExternal?: " + product.getExternal());
 	        LOGGER.info("The product isElectronics?: " + product.getElectronics());
 	    
-    		LOGGER.info("____________________________________________________________________________________________________________");//TODO
+    		LOGGER.info(dash);//TODO
 
 		}
 
@@ -931,23 +930,23 @@ for (Installar installar : InstallarList) {
     
     
 	public static void main(String[] args) throws MessagingException {
-		// TODO Auto-generated method stub
+		
 		ProductInformation();
 		Scanner input2 = new Scanner(System.in);
-		LOGGER.info("========================");
+		LOGGER.info(Ddash);
 		LOGGER.info("1.Sign Up");
 		LOGGER.info("2.log in");
 		LOGGER.info("3.Exit the program");
-		LOGGER.info("========================");
+		LOGGER.info(Ddash);
 		int num = input2.nextInt();
 		if ( num ==1 ) {
 			signup(FullInformationToSignUp());
 			num=2;
 		}
 		if (num==2){
-			LOGGER.info("Enter your Email please");
+			LOGGER.info(email);
 		Email = input2.next();
-		LOGGER.info("Enter your password please");
+		LOGGER.info(Pass);
 		String pass = input2.next();
 		showMenu(login(Email , pass));}
 		if (num==3)
