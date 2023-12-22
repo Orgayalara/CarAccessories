@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 
 public class Admins {
 //updated
@@ -22,8 +21,6 @@ public class Admins {
 
 	
 
-	public String getfullname() {
-		return fullName;
-	}
+	
 	   	 
 }
