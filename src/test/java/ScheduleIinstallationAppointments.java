@@ -15,7 +15,7 @@ public class ScheduleIinstallationAppointments {
 	@Then("Specific appointments are scheduled.")
 	public void specific_appointments_are_scheduled() {
 		
-		CarsAccessories.ProductInformation();
+		CarsAccessories.productInformation();
 		assertTrue(rolemaintest.scheduleAppointment());	}
 	
 

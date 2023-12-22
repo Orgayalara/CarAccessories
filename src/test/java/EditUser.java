@@ -15,8 +15,8 @@ public class EditUser {
         this.username = username;
         cus.loggedIn=true;  
         
-        CarsAccessories.CustomerList.add(cus);
-       // CarsAccessories.CustomerList.add(cus);
+        
+        CarsAccessories.CUSTOMERLIST.add(cus);
 
 
     }
@@ -44,7 +44,7 @@ public class EditUser {
     }
 
     public Users getUserByUsername(String username) {
-        for (Users user : CarsAccessories.CustomerList) {
+        for (Users user : CarsAccessories.CUSTOMERLIST) {
             if (user.getfullname().equals(username)) {
                 return user;
             }

@@ -18,7 +18,7 @@ public class RemoveProductTest {
 
 	@Then("Remove the Product")
 	public void remove_the_product() {
-		CarsAccessories.ProductInformation();
+		CarsAccessories.productInformation();
 		assertTrue(CarsAccessories.removeProduct("Hood"));
 	}
 

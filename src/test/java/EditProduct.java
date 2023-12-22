@@ -12,7 +12,7 @@ public class EditProduct {
 
 	@Then("Edit the Product .")
 	public void edit_the_product() {
-		CarsAccessories.ProductInformation();
+		CarsAccessories.productInformation();
 		assertTrue(CarsAccessories.editProduct("Hood",1,"Hod"));
 		assertTrue(CarsAccessories.editProduct("Hod",2,"15fh324r"));
 		assertTrue(CarsAccessories.editProduct("Hod",3,"5700"));

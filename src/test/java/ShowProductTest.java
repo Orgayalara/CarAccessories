@@ -21,9 +21,9 @@ public class ShowProductTest {
 	@Then("View the Product.")
 	public void view_the_product() {
 //		ArrayList <Product> ProductList = new ArrayList<Product>();
-		CarsAccessories.ProductInformation();
+		CarsAccessories.productInformation();
 		int n=1;
-	    assertTrue(CarsAccessories.catalog(1));
+	    assertTrue(CarsAccessories.cAtalog(1));
 	
 	}
 

@@ -12,7 +12,7 @@ public class Search {
 
 	@Then("Finds all products that start with the entered clip.")
 	public void finds_all_products_that_start_with_the_entered_clip() {
-		CarsAccessories.ProductInformation();
+		CarsAccessories.productInformation();
 		String s = "Ho";
 		assertTrue(CarsAccessories.search(s));
 	}

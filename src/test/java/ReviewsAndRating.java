@@ -16,6 +16,6 @@ public void the_moderator_should_see_this_comment() {
 	ReviewsandRatings r= new ReviewsandRatings(5 ,"nice" , "Hood" , "lara@example.com" );
 	
 	assertTrue(CarsAccessories.funReviewsandRatings(r));
-	assertTrue(CarsAccessories.ShowTheReviewsAndRatings());
+	assertTrue(CarsAccessories.showTheReviewsAndRatings());
 }
 }
