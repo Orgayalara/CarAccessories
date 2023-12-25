@@ -6,14 +6,14 @@ public class Order {
 
     private Product product;
     private Users customer;
-    private Date orderDate;
+   // private Date orderDate;
     private boolean status;
 
     // Parameterized constructor
     public Order(Product product, Users customer, Date orderDate , boolean status) {
         this.product = product;
         this.customer = customer;
-        this.orderDate = orderDate;
+     //   this.orderDate = orderDate;
         this.setStatus(status);
     }
 

@@ -10,7 +10,7 @@ public class SendMail {
     private SendMail(){}
     public static void getSendEmail(String toUserMessage,String email) throws MessagingException{
         Logger logger = Logger.getLogger(SendMail.class.getName());
-        Logger logger2 = Logger.getLogger(SendMail.class.getName());
+      //  Logger logger2 = Logger.getLogger(SendMail.class.getName());
 
         // Recipient's email ID needs to be mentioned.
         String to = email;

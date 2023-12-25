@@ -69,86 +69,56 @@ public class CarsAccessories {
 		LOGGER.info("\n1.Internal \n2.External \n3.Electronics");
 			return input2.nextInt();
 	 }
-	 public static boolean isInternal(int i)
-	 {
-		 return PRODUCTLIST.get(i).getInternal() == true ;
-	 }
-	 public static boolean isExternal(int i)
-	 {
-		 return PRODUCTLIST.get(i).getExternal() == true ;
-	 }
-	 public static boolean isElectronics(int i)
-	 {
-		 return PRODUCTLIST.get(i).getElectronics() == true ;
-	 }
-	 public static boolean cAtalog(int n) {
-		
-		
-			switch(n) {
-			
-			case 1:
-				LOGGER.info("Internal :\n");
-		             for (int i =0 ; i<PRODUCTLIST.size();i++) {
-    		         if(isInternal(i) ) {
-    			 
-    		        	  LOGGER.info(NAME + PRODUCTLIST.get(i).getName());
-		            	   LOGGER.info(PHOTO + PRODUCTLIST.get(i).getPhoto());
-		            	   LOGGER.info(PRICE + PRODUCTLIST.get(i).getPrice());
-		            	   LOGGER.info(DETAILS + PRODUCTLIST.get(i).getDetails());
-		            	   LOGGER.info(TYPE + PRODUCTLIST.get(i).getType());
-    		    		
-    		        	 LOGGER.info(DASH);
+	 public static boolean catalog(int n) {
+		    switch (n) {
+		        case 1:
+		            displayCategory("Internal" , n);
+		            break;
+		        case 2:
+		            displayCategory("External" , n);
+		            break;
+		        case 3:
+		            displayCategory("Electronics" , n);
+		            break;
+		        default:
+		            break;
+		    }
+		    return true;
+		}
 
-    					 
-    		             }
-                       	 }
-		            
-		           break;
-			case 2 :
-			         	LOGGER.info("External :\n");
-	                   for (int i =0 ; i<PRODUCTLIST.size();i++) {
-		               if(isExternal(i) ) {
-			 
-		            	   LOGGER.info(NAME + PRODUCTLIST.get(i).getName());
-		            	   LOGGER.info(PHOTO + PRODUCTLIST.get(i).getPhoto());
-		            	   LOGGER.info(PRICE + PRODUCTLIST.get(i).getPrice());
-		            	   LOGGER.info(DETAILS + PRODUCTLIST.get(i).getDetails());
-		            	   LOGGER.info(TYPE + PRODUCTLIST.get(i).getType());
-		               
-				    
-		               LOGGER.info(DASH);
+		private static void displayCategory(String categoryName , int n) {
+		    LOGGER.info(categoryName + " :\n");
+		    for (int i = 0; i < PRODUCTLIST.size(); i++) {
+		        if (isProductOfType(i , n)) {
+		            displayProductDetails(i);
+		        }
+		    }
+		}
 
-							 
-		                 }
-                      	 }
-	                   
-	               break;
-			case 3 :
-				         LOGGER.info("Electronics :\n");
-                          for (int i =0 ; i<PRODUCTLIST.size();i++) {
-	                      if(isElectronics(i)) {
-		 
-	                    	  LOGGER.info(NAME + PRODUCTLIST.get(i).getName());
-	                    	  LOGGER.info(PHOTO + PRODUCTLIST.get(i).getPhoto());
-	                    	  LOGGER.info(PRICE + PRODUCTLIST.get(i).getPrice());
-	                    	  LOGGER.info(DETAILS + PRODUCTLIST.get(i).getDetails());
-	                    	  LOGGER.info(TYPE + PRODUCTLIST.get(i).getType());
-	                      
-
-	    			    	
-	                    	  LOGGER.info(DASH);
-
-	    						 
-	    	                 }
-	                   	 }
-                         
-	                break;
-	                default:  break;
-	                
+		private static boolean isProductOfType(int index , int n) {
+		    switch (n) {
+	        case 1:
+	        	 return PRODUCTLIST.get(index).getInternal() == true;
+	            
+	        case 2:
+	        	 return PRODUCTLIST.get(index).getExternal() == true;
+	            
+	        case 3:
+	        	 return PRODUCTLIST.get(index).getElectronics() == true;
+	        default:
+	            return false;
 	    }
-			
-			return true;
-	}
+		}
+
+		private static void displayProductDetails(int index) {
+		    LOGGER.info(NAME + PRODUCTLIST.get(index).getName());
+		    LOGGER.info(PHOTO + PRODUCTLIST.get(index).getPhoto());
+		    LOGGER.info(PRICE + PRODUCTLIST.get(index).getPrice());
+		    LOGGER.info(DETAILS + PRODUCTLIST.get(index).getDetails());
+		    LOGGER.info(TYPE + PRODUCTLIST.get(index).getType());
+		    LOGGER.info(DASH);
+		}
+		
      public static void productInformation() {
     	
 
@@ -169,48 +139,48 @@ public class CarsAccessories {
     }
     public static Product addInfoProduct() {
     	 LOGGER.info("Enter Your Name Product:");
-		String NAME1 = input2.next();
+		String name1 = input2.next();
 		 LOGGER.info("Enter Your Photo Product:");
-		String PHOTO1 = input2.next();
+		String photo1 = input2.next();
 		 LOGGER.info("Enter Your Price Product:");
-		int Price = input2.nextInt();
+		int price1 = input2.nextInt();
 		 LOGGER.info("Enter Your Details Product:");
-		String DETAILS1 = input2.next();
+		String details1 = input2.next();
 		 LOGGER.info("Enter Your Type Product:");
-		String TYPE1 = input2.next();
+		String type1 = input2.next();
 		 LOGGER.info("Enter the number of available pieces of the product:");
-		int AVILABILITY1 = input2.nextInt();
+		int avilability1 = input2.nextInt();
 		 LOGGER.info("Is internal?:");//TODO
-		boolean ISINTERNAL1 = input2.nextBoolean();
+		boolean isinternal1 = input2.nextBoolean();
 		 LOGGER.info("Is External?:");//TODO
-		boolean ISEXTERNAL1 = input2.nextBoolean();
+		boolean isexternal1 = input2.nextBoolean();
 		 LOGGER.info("Is Electronics?:");//TODO
-		boolean ISELECTRONICS1 = input2.nextBoolean();
+		boolean iselectronics1 = input2.nextBoolean();
 		
-		Product PRODUCT1 = new Product(NAME1,PHOTO1,Price,DETAILS1,TYPE1,AVILABILITY1,ISINTERNAL1,ISEXTERNAL1,ISELECTRONICS1);
-    	return PRODUCT1;
+		Product product1 = new Product(name1,photo1,price1,details1,type1,avilability1,isinternal1,isexternal1,iselectronics1);
+    	return product1;
     		
         
     }
     public static Users addInfoCustomersAcount() {
     	 LOGGER.info("Enter the  Name of Customer:");
-    	String NAME2 = input2.next();
+    	String name2 = input2.next();
     	 LOGGER.info("Enter the  Email of Customer:");
-    	String EMAIL2 = input2.next();
+    	String email2 = input2.next();
     	 LOGGER.info("Enter the  Password of Customer:");
-    	String PASSWORD = input2.next();
+    	String passowrd2 = input2.next();
     	 LOGGER.info("Enter the  Contact Number of Customer:");
-    	String  CONTACTNUMBER = input2.next();
+    	String  contactnumber2 = input2.next();
     	 LOGGER.info("Enter the  Shipping Address of Customer:");
-    	String SHIPPINGADDRESS = input2.next();
+    	String shippingaddredd2 = input2.next();
     	 LOGGER.info("Enter the  Number Of Car of Customer:");
-    	int  NUMBEROFCAR = input2.nextInt();
+    	int  numberofcar2 = input2.nextInt();
     	 LOGGER.info("Enter the  Type Of Car of Customer:");
-    	String TYPEOFCAR = input2.next();
+    	String typeofcar2 = input2.next();
     	
-    	String HISTORYORDER = " ";
+    	String historyorder2 = " ";
     	
-    	Users user1 = new Users(NAME2,EMAIL2,PASSWORD,CONTACTNUMBER,SHIPPINGADDRESS,NUMBEROFCAR,TYPEOFCAR,HISTORYORDER);
+    	Users user1 = new Users(name2,email2,passowrd2,contactnumber2,shippingaddredd2,numberofcar2,typeofcar2,historyorder2);
     	return user1;
     }
     
@@ -286,7 +256,7 @@ public class CarsAccessories {
                     showMenuForCus();
                     break;
                 case 2:
-                    makePurchase(currentuser);
+                    makePurchase();
                     showMenuForCus();
                     break;
                 case 3:
@@ -294,7 +264,7 @@ public class CarsAccessories {
                     showMenuForCus();
                     break;
                 case 4:
-                	requestanInstalltion(currentuser);
+                	requestanInstalltion();
                 	showMenuForCus();
                     break;
                 case 5:
@@ -325,11 +295,12 @@ public class CarsAccessories {
 
    
   
-    public static void editProfile(String USERNAME) {
+    public static void editProfile(String username) {
         for (Users customer : CUSTOMERLIST) {
-            if (customer.getfullname().equals(USERNAME)) {
+            if (customer.getfullname().equals(username)) {
                 Scanner scanner = new Scanner(System.in);
-                LOGGER.info("Editing profile for user: " + USERNAME);
+                LOGGER.info("Editing profile for user: " + username);
+           
 //
                 // Prompt the user to enter new details
                 LOGGER.info("Enter new full name: ");
@@ -356,7 +327,7 @@ public class CarsAccessories {
 
 
      
-	public static void requestanInstalltion(String CURRENTUSER) throws MessagingException {
+	public static void requestanInstalltion() throws MessagingException {
 		LOGGER.info("===== Request an Installtion =====");
          browseProducts();
 
@@ -393,10 +364,10 @@ public class CarsAccessories {
 	public static int browseProducts() {
 		LOGGER.info("===== Browse Products =====");
      
-		cAtalog(infoProductcatalog());
+		catalog(infoProductcatalog());
     return 1; }
 
-    public static void makePurchase(String Customer) throws MessagingException {
+    public static void makePurchase() throws MessagingException {
     	LOGGER.info("===== Make a Purchase =====");
         browseProducts();
 
@@ -562,7 +533,7 @@ public class CarsAccessories {
     	int num = input2.nextInt();
 switch(num) {
 		
-		case 1 :cAtalog(infoProductcatalog());
+		case 1 :catalog(infoProductcatalog());
 		showMenuForAd();
 			
 				
@@ -677,12 +648,20 @@ switch(num) {
     	
     	
     	for (int i = 0; i < INST_REQUEST_WITH_DATE_AND_DETAILS.size(); i++) {
-            InstallationRequest REQUEST = INST_REQUEST_WITH_DATE_AND_DETAILS.get(i);
-            LOGGER.info((i + 1) + ") Product: " + REQUEST.getProduct().getName() +
-            		CUSTOMER + REQUEST.getCustomer().getfullname() +
-                    DATE+ REQUEST.getPreferredDate() +
-                    STATUS + REQUEST.getStatus() + 
-                    " - Details Form: " + REQUEST.getdetailsForm());
+           InstallationRequest REQUEST = INST_REQUEST_WITH_DATE_AND_DETAILS.get(i);
+//            LOGGER.info((i + 1) + ") Product: " + REQUEST.getProduct().getName() +
+//            		CUSTOMER + REQUEST.getCustomer().getfullname() +
+//                    DATE+ REQUEST.getPreferredDate() +
+//                    STATUS + REQUEST.getStatus() + 
+//                    " - Details Form: " + REQUEST.getdetailsForm());
+    		LOGGER.info("{} Product: {} {} {} {} {} - Details Form: {}"+
+    			    (i + 1)+
+    			    REQUEST.getProduct().getName()+
+    			    CUSTOMER+ REQUEST.getCustomer().getfullname()+
+    			    DATE+ REQUEST.getPreferredDate()+
+    			    STATUS+ REQUEST.getStatus()+
+    			    REQUEST.getdetailsForm()
+    			);
         }
     	
     	return true;
@@ -740,7 +719,7 @@ switch(num) {
 		}
 	}
     public static boolean scheduleAppointment() {
-    	boolean flag=false;
+    	
     	Scanner scanner = new Scanner(System.in);
 
     	LOGGER.info("===== Schedule Appointment =====");
@@ -754,7 +733,7 @@ switch(num) {
             		DATE+ REQUEST.getPreferredDate() +
             		STATUS + REQUEST.getStatus());
         }
-         flag = true;
+         
         // Ask the installer to choose an installation request
          LOGGER.info("Enter the number of the installation request you want to schedule: ");
         int requestNumber = scanner.nextInt();
@@ -817,8 +796,7 @@ switch(num) {
 		int numberOfCar = input2.nextInt();
 		LOGGER.info("Enter Your typeOfCar:");
 		String typeOfCar = input2.next();
-		Users newUser;
-		return  newUser = new Users(fullName,Email,password,contactNumber,shippingAddress,numberOfCar,typeOfCar,"");
+		return  new Users(fullName,Email,password,contactNumber,shippingAddress,numberOfCar,typeOfCar,"");
     	 
     	
     }

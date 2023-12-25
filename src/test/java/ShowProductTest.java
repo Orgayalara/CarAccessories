@@ -25,7 +25,7 @@ public class ShowProductTest {
 //		ArrayList <Product> ProductList = new ArrayList<Product>();
 		CarsAccessories.productInformation();
 		int n=1;
-	    assertTrue(CarsAccessories.cAtalog(1));
+	    assertTrue(CarsAccessories.catalog(1));
 	
 	}
 
